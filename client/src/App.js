@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
+import SignIn from './screens/SignIn/SignIn'
 
 function App() {
   return (
     <div className="App">
+      <SignIn />
     </div>
   );
 }
