@@ -1,4 +1,3 @@
-import React from "React"
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import { createUser } from "../../services/users"
