@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
-import { createUser } from "../../services/users"
+import { Redirect, Link } from 'react-router-dom'
+import { createUser } from "../../Services/users"
 
 class SignUp extends Component {
   constructor() {
@@ -33,9 +33,9 @@ class SignUp extends Component {
   }
 
   render() {
-
+    const {created} = this.state
     if (created) {
-      return <Redirect to={`/users`} />
+      return <Redirect to={`/`} />
     }
 
     return (
@@ -66,8 +66,7 @@ class SignUp extends Component {
               name="password"
               onChange={this.handleChange}
             />
-            <button type= 'submit' className= "signup-button">Sign Up</button>
-            {/* "Have an account?" link */}
+            <Link to='/'><button type= 'submit' className= "signup-button">Sign Up</button></Link>
           </form>
       </>
     )

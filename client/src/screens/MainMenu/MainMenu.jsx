@@ -1,13 +1,18 @@
 
 import React, { Component } from 'react'
-// import Layout from '../../components/shared/Layout/Layout'
-// import DropDown from '../../components/shared/DropdownMenu/DropDown'
-
-
+import {getUser} from '../../Services/users.js'
 
 class MainMenu extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      currentUser: []
+    }
+  }
+  async componentDidMount() {
+    let { id } = this.props.match.params
+    const user = await getUser(id)
+    this.setState({user})
   }
   render () {
     return (
