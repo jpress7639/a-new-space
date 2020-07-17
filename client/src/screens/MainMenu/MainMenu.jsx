@@ -1,14 +1,19 @@
-import React from 'react'
+
+import React, { Component } from 'react'
 // import Layout from '../../components/shared/Layout/Layout'
 // import DropDown from '../../components/shared/DropdownMenu/DropDown'
-import SignIn from '../SignIn/SignIn'
 
 
-const Home = () => {
-    return(
-        <div>
-          <SignIn />
+
+class MainMenu extends Component {
+  constructor(props) {
+    super(props)
+  }
+  render () {
+    return (
+      <div>
+        <p>This is the main menu</p>
         </div>
-    )
+    )}
 }
-export default Home
+export default MainMenu
