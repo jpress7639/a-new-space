@@ -5,16 +5,29 @@ class SignIn extends Component {
   constructor() {
     super()
     this.state = {
-      email: '',
-      password: ''
+      user: [],
+      queryUser: {
+        email: '',
+        password: ''
+      }
     }
   }
   handleChange = (e) => { 
     const { name, value } = e.target
     this.setState({
-      [name] : value
+      queryUser: {
+        [name]: value
+      }
     })
   }
+  
+  async componentDidMount()  {
+    const userData = await getUsers()
+    this.setState({
+      user: userData
+    })
+  }
+
 
   render() {
     return (
@@ -23,7 +36,7 @@ class SignIn extends Component {
         <form className='container'>
           <input type='text' name='email' onChange={this.handleChange} placeholder='Email' />
           <input type='text' name='password' onChange={this.handleChange} placeholder='Password' />
-          <button >Lets Jam</button>
+          <button onClick={this.handleClick}>Lets Jam</button>
         </form>
         <p>Sign up</p>
       </>
