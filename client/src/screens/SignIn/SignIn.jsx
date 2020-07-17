@@ -9,19 +9,20 @@ class SignIn extends Component {
       password: ''
     }
   }
-  handleChangeEmail = (e) => {
-    const change = e.target.value
+  handleChange = (e) => { 
+    const { name, value } = e.target
     this.setState({
-      email: change
+      [name] : value
     })
   }
+
   render() {
     return (
       <>
         <h1>Welcome</h1>
         <form className='container'>
-          <input type='text' onChange={e => this.handleChangeEmail(e)} placeholder='Email'></input>
-          <input type='text' onChange={e => this.handleChangePassword(e)} placeholder='Password'></input>
+          <input type='text' name='email' onChange={this.handleChange} placeholder='Email' />
+          <input type='text' name='password' onChange={this.handleChange} placeholder='Password' />
           <button >Lets Jam</button>
         </form>
         <p>Sign up</p>
