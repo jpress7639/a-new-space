@@ -1,0 +1,12 @@
+div.hamburger {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+div.dropdown-menu {
+    position: absolute;
+    display: none;
+    height: 60%;
+    width: 40%;
+}

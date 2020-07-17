@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { getUser, deleteUser } from "../../Services/users"
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import Layout from '../../components/shared/Layout'
 
 class AccountDetail extends Component {
@@ -25,6 +25,9 @@ class AccountDetail extends Component {
 
     render() {
         const { user } = this.state
+        if (deleteUser()) {
+            return <Redirect to={`/`}/>
+        }
         return (
         <div>
             <div className="user-profile">

@@ -1,0 +1,14 @@
+div.layout {
+    display: flex;
+    flex-direction: row;
+}
+
+div.layout > div.sidebar {
+    justify-self: flex-end;
+}
+
+div.layout > div.layout-children{
+    justify-self: center;
+    margin: 30px;
+    padding: 15px;
+}
