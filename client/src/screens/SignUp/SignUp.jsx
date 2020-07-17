@@ -1,4 +1,3 @@
-import React from "React"
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import { createUser } from "../../services/users"
@@ -8,8 +7,8 @@ class SignUp extends Component {
     super()
     this.state = {
       user: {
-        firstname: '',
-        lastname: '',
+        firstName: '',
+        lastName: '',
         email: '',
         password: '',
       },
@@ -46,13 +45,13 @@ class SignUp extends Component {
             <input
               className="input-first"
               placeholder="Full Name"
-              name="firstname"
+              name="firstName"
               onChange={this.handleChange}
             />
             <input
               className="input-last"
               placeholder="Last Name"
-              name="lastname"
+              name="lastName"
               onChange={this.handleChange}
             />
             <input
