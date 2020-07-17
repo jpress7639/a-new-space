@@ -5,7 +5,7 @@ class SignIn extends Component {
   constructor() {
     super()
     this.state = {
-      user: [],
+      users: [],
       queryUser: {
         email: '',
         password: ''
@@ -24,10 +24,13 @@ class SignIn extends Component {
   async componentDidMount()  {
     const userData = await getUsers()
     this.setState({
-      user: userData
+      users: userData
     })
   }
 
+  handleClick = () => {
+    
+  }
 
   render() {
     return (
