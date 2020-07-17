@@ -1,38 +1,52 @@
 import React, { Component } from 'react'
 import { getUsers } from '../../Services/users'
+import './SignIn.css'
+import {Redirect} from 'react-router-dom'
 
 class SignIn extends Component {
   constructor() {
     super()
     this.state = {
       users: [],
-      queryUser: {
-        email: '',
-        password: ''
-      }
+      currentUser: [],
+      signedIn: false,
+      email: '',
+      password: ''
     }
   }
   handleChange = (e) => { 
-    const { name, value } = e.target
     this.setState({
-      queryUser: {
-        [name]: value
-      }
+      [e.target.name]: e.target.value
     })
   }
   
-  async componentDidMount()  {
+  async componentDidMount() {
     const userData = await getUsers()
     this.setState({
       users: userData
     })
   }
 
-  handleClick = () => {
-    
+  handleClick = (e) => {
+    e.preventDefault()
+    const currentUser = this.state.users.find(user => 
+      user.email === this.state.email && user.password === this.state.password
+    )
+    if (currentUser) {
+      this.setState({
+        currentUser: currentUser,
+        signedIn: true
+      })
+    } else {
+      alert('User not found')
+    }
   }
-
+  
   render() {
+    const {signedIn} = this.state
+    if (signedIn) {
+      return <Redirect to={`/users/${this.state.currentUser._id}`} />
+    }
     return (
       <>
         <h1>Welcome</h1>
@@ -40,6 +54,7 @@ class SignIn extends Component {
           <input type='text' name='email' onChange={this.handleChange} placeholder='Email' />
           <input type='text' name='password' onChange={this.handleChange} placeholder='Password' />
           <button onClick={this.handleClick}>Lets Jam</button>
+          <p className='user-response'></p>
         </form>
         <p>Sign up</p>
       </>

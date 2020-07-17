@@ -6,7 +6,6 @@ class DropDown {
         return(
             <>
             <div className="hamburger">
-
             </div>
             <div className="dropdown-menu">
             <nav>
