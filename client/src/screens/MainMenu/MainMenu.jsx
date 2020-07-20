@@ -6,18 +6,22 @@ class MainMenu extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentUser: []
+      user: []
     }
   }
+
   async componentDidMount() {
     let { id } = this.props.match.params
     const user = await getUser(id)
     this.setState({user})
   }
-  render () {
+
+  render() {
+    const { firstName } = this.state.user
+    const {lastName} = this.state.user
     return (
       <div>
-        <p>This is the main menu</p>
+        <p>Welcome {firstName} {lastName}, let's take you to your space! </p>
         </div>
     )}
 }
