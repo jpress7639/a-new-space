@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { getUser } from '../../Services/users.js'
-import Layout from '../../components/shared/Layout/Layout'
 
 class MainMenu extends Component {
   constructor(props) {

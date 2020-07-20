@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { getUsers } from '../../Services/users'
 import './SignIn.css'
 import {Redirect, Link} from 'react-router-dom'
+import './SignIn.css'
 
 class SignIn extends Component {
   constructor() {
@@ -52,11 +53,11 @@ class SignIn extends Component {
         <h1>Welcome</h1>
         <form className='container'>
           <input type='text' name='email' onChange={this.handleChange} placeholder='Email' />
-          <input type='text' name='password' onChange={this.handleChange} placeholder='Password' />
+          <input type='password' name='password' onChange={this.handleChange} placeholder='Password' />
           <button onClick={this.handleClick}>Lets Jam</button>
           <p className='user-response'></p>
         </form>
-        <Link to='/users/create-users'>Sign Up</Link>
+        <h3><Link to='/users/create-users'>Sign Up</Link></h3>
       </>
     )
   }
