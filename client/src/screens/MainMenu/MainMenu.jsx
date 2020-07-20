@@ -1,4 +1,3 @@
-import Layout from '../../components/shared/Layout/Layout'
 import React, { Component } from 'react'
 import { getUser } from '../../Services/users.js'
 
