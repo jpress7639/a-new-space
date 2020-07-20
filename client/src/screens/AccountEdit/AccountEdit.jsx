@@ -43,13 +43,12 @@ class AccountEdit extends Component {
 
     render() {
         const { user, updated } = this.state
-
         if (updated) {
-            return <Redirect to={`users/${this.props.match.params.id}`} />
+            return <Redirect to={`/users/${user._id}/detail`} />
         }
         return (
           <div>
-            <Layout>
+            <Layout id={user._id}>
               <h3>{user.firstName} {user.lastName}</h3>
                 <img src={user.imgURL} alt={user.firstName}></img>
                 <form onSubmit={this.handleSubmit}>

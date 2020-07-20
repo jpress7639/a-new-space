@@ -32,28 +32,27 @@ class AccountDetail extends Component {
     })
   }
 
-    render() {
-      const { user } = this.state
-      const {deleted} = this.state
-        if (deleted) {
-            return <Redirect to={`/`}/>
-        }
-        return (
-        <div>
-            <Layout >
-            <div className="user-profile">
-                <img src={user.imgURL} alt={user.firstName}></img>
-                <h2>{user.firstName}{user.lastName}</h2>
-                <h3>{user.email}</h3>
-            </div>
-            <div className="route-buttons">
-                <button><Link to={`/users/${user._id}/edit`}>Update My Account</Link></button>
-                <button onClick={() => this.handleClick()}>Delete My Account</button>
-            </div>
-            </Layout>
-        </div>
-        )
-    }
+  render() {
+    const { user, deleted } = this.state
+      if (deleted) {
+        return <Redirect to={`/`}/>
+      }
+      return (
+      <div>
+        <Layout id={user._id}>
+          <div className="user-profile">
+            <img src={user.imgURL} alt={user.firstName}></img>
+              <h2>{user.firstName} {user.lastName}</h2>
+              <h3>{user.email}</h3>
+          </div>
+          <div className="route-buttons">
+            <button><Link to={`/users/${user._id}/edit`}>Update My Account</Link></button>
+            <button onClick={() => this.handleClick()}>Delete My Account</button>
+          </div>
+        </Layout>
+      </div>
+    )
+  }
 }
 
 export default AccountDetail
