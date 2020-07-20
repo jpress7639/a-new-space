@@ -51,6 +51,7 @@ class SignIn extends Component {
     return (
       <>
         <h1>Welcome</h1>
+        <div className="sign-in">
         <form className='container'>
           <input type='text' name='email' onChange={this.handleChange} placeholder='Email' />
           <input type='password' name='password' onChange={this.handleChange} placeholder='Password' />
@@ -58,6 +59,7 @@ class SignIn extends Component {
           <p className='user-response'></p>
         </form>
         <h3><Link to='/users/create-users'>Sign Up</Link></h3>
+        </div>
       </>
     )
   }

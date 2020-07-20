@@ -1,0 +1,9 @@
+div.welcome h3{
+    font-size: 30px;
+    color: rgb(249, 247, 134);
+    line-height: 40px;
+}
+
+span.emphasis{
+    font-family: bungee shade;
+}
