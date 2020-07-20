@@ -6,15 +6,16 @@ import Layout from '../../components/shared/Layout/Layout'
 class AccountDetail extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            user: {
-                firstName: '',
-                lastName: '',
-                email: '',
-                password: '',
-                imgURL: '',
-            }
-        }
+      this.state = {
+        user: {
+          firstName: '',
+          lastName: '',
+          email: '',
+          password: '',
+          imgURL: '',
+        },
+        deleted: false
+      }
     }
 
     async componentDidMount() {
@@ -22,17 +23,25 @@ class AccountDetail extends Component {
         const user = await getUser(id)
         this.setState({user})
     }
+  handleClick() {
+    const { user } = this.state
+    deleteUser(user._id)
+    this.setState({
+      deleted: true
+    })
+  }
 
     render() {
-        const { user } = this.state
-        if (deleteUser()) {
+      const { user } = this.state
+      const {deleted} = this.state
+        if (deleted) {
             return <Redirect to={`/`}/>
         }
         return (
         <div>
-            <Layout>
+            <Layout >
             <div className="user-profile">
-                <img src={user.imgURL}></img>
+                <img src={user.imgURL} alt={user.firstName}></img>
                 <h2>{user.firstName}{user.lastName}</h2>
                 <h3>{user.email}</h3>
             </div>

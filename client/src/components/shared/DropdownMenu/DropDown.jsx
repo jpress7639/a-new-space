@@ -18,17 +18,18 @@ class DropDown extends Component{
     }
 
     render(){
-        const { user } = this.state
+      const { user } = this.state
+      const {id} = this.props
         return(
             <>
             <div className="hamburger">
             </div>
             <div className="dropdown-menu">
             <nav>
-                <Link to={`users/${user._id}`}><p>Home</p></Link>
-                <Link to={`/users/${user._id}/edit`}><p>My Account</p></Link>
+                <Link to={`/users/${id}`}><p>Home</p></Link>
+                <Link to={`/users/${id}/detail`}><p>My Account</p></Link>
                 <p>About</p>
-                <Link to={'/'}>Sign Out</Link>
+                <Link to={'/users/sign-in-user'}>Sign Out</Link>
             </nav>
             </div>
             </>
