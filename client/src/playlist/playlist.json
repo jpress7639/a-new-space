@@ -1,0 +1,56 @@
+[
+  {
+    "artist": "YELLOW MAGIC ORCHESTRA",
+    "song": "Rydeen",
+    "genre": "Dance/Electronic",
+    "imgURL": "https://imgur.com/MiOMexQ"
+  },
+  {
+    "artist": "YELLOW MAGIC ORCHESTRA",
+    "song": "Firecracker",
+    "genre": "Dance/Electronic",
+    "imgURL": "https://imgur.com/Adj0uHE"
+  },
+  {
+    "artist": "YELLOW MAGIC ORCHESTRA",
+    "song": "Focus",
+    "genre": "Dance/Electronic",
+    "imgURL": "https://imgur.com/AEUlze0"
+  },
+  {
+    "artist": "Billie Marten",
+    "song": "Bird",
+    "genre": "Folk",
+    "imgURL": "https://res.cloudinary.com/dkhiieq9p/image/upload/v1595252803/a3b0602abb2f75fe96b3adc46c70548a.200x200x1_xpspzl.jpg"
+  },
+  {
+    "artist": "Becca Stevens",
+    "song": "Regina",
+    "genre": "Folk",
+    "imgURL": "https://res.cloudinary.com/dkhiieq9p/image/upload/v1594319880/81QYx6sg6jL._SX522__vgjifs.jpg"
+  },
+  {
+    "artist": "James Blake",
+    "song": "The Color in Anything",
+    "genre": "Folk",
+    "imgURL": "https://res.cloudinary.com/dkhiieq9p/image/upload/v1595253023/The_colour_in_anything_blake_du8dlo.jpg"
+  },
+  {
+    "artist": "Kendra Morris",
+    "song": "Space Oddity",
+    "genre": "Soul",
+    "imgURL": "https://imgur.com/UAtjWQN"
+  },
+  {
+    "artist": "Lianne La Havas",
+    "song": "Please Don't Make Me Cry",
+    "genre": "Soul",
+    "imgURL": "https://imgur.com/4PjXAGO"
+  },
+  {
+    "artist": "Jorja Smith",
+    "song": "Rouse Rouge",
+    "genre": "Soul",
+    "imgURL": "https://imgur.com/NAG11KR"
+  }
+]
