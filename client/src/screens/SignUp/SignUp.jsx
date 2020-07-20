@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect, Link } from 'react-router-dom'
 import { createUser } from "../../Services/users"
+import './SignUp.css'
 
 class SignUp extends Component {
   constructor() {
@@ -66,7 +67,7 @@ class SignUp extends Component {
               name="password"
               onChange={this.handleChange}
             />
-            <Link to='/'><button type= 'submit' className= "signup-button">Sign Up</button></Link>
+            <Link to='/'><button type='submit' className= "signup-button">SIGN UP</button></Link>
           </form>
       </>
     )

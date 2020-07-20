@@ -4,7 +4,7 @@ div.layout {
 }
 
 div.layout > div.sidebar {
-    justify-self: flex-end;
+  justify-self: flex-end;
 }
 
 div.layout > div.layout-children{

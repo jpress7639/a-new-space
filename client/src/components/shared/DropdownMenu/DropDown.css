@@ -1,12 +1,28 @@
+div.dropdown {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 50px;
+}
+
+
 div.hamburger {
     position: relative;
     width: 20px;
     height: 20px;
 }
 
-div.dropdown-menu {
+div.dropdown-menu nav{
+    background-color: rgba(210, 212, 244, 0.5);
     position: absolute;
-    display: none;
-    height: 60%;
-    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 70%;
+    width: 20%;
+}
+
+div.drop-down-menu nav h4{
+    color: white;
+    font-weight: bold;
 }

@@ -3,3 +3,51 @@
   margin-top: 10px;
   margin-bottom: 10px;
 } */
+
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;700&family=Bungee&family=Bungee+Shade&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+body {
+  background-color: #242847;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px auto;
+  font-family: bungee shade;
+  font-size: 50px;
+  color: #f7f58f;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form input {
+  font-family: briyani;
+  width: 33%;
+  height: 30px;
+  margin: 10px auto;
+}
+
+form button {
+  margin: 10px auto;
+  width: 30%;
+}
+
+h3 {
+  text-align: center;
+  transition: all 2s;
+}
+
+h3:hover{
+  transform: scale(1.1);
+}
+
+a {
+  font-family: biryani;
+  font-size: 30px;
+  text-align: right;
+  color: #f7f58f;
+}
