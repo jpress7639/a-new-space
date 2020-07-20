@@ -15,7 +15,7 @@ const getUsers = async (req, res) => {
 const getUser = async (req, res) => {
   try {
     const { id } = req.params
-    const user = await User.find(id)
+    const user = await User.findById(id)
     if (user) {
       return res.json(user)
     }
@@ -27,7 +27,7 @@ const getUser = async (req, res) => {
 
 const createUser = async (req, res) => {
   try {
-    const user = await new User(req, res)
+    const user = await new User(req.body)
     await user.save()
     res.status(201).json(user)
   } catch (error) {

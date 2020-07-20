@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { getUsers } from '../../Services/users'
 import './SignIn.css'
-import {Redirect} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom'
 
 class SignIn extends Component {
   constructor() {
@@ -56,7 +56,7 @@ class SignIn extends Component {
           <button onClick={this.handleClick}>Lets Jam</button>
           <p className='user-response'></p>
         </form>
-        <p>Sign up</p>
+        <Link to='/users/create-users'>Sign Up</Link>
       </>
     )
   }

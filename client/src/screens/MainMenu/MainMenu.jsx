@@ -1,17 +1,28 @@
 
 import React, { Component } from 'react'
-import Layout from '../../components/shared/Layout/Layout'
+import {getUser} from '../../Services/users.js'
 
 class MainMenu extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      user: []
+    }
   }
-  render () {
-    
+
+  async componentDidMount() {
+    let { id } = this.props.match.params
+    const user = await getUser(id)
+    this.setState({user})
+  }
+
+  render() {
+    const { firstName } = this.state.user
+    const {lastName} = this.state.user
     return (
       <Layout>
       <div>
-        <p>Welcome, This is the main menu</p>
+        <p>Welcome {firstName} {lastName}, let's take you to your space! </p>
         </div>
         </Layout>
     )}
