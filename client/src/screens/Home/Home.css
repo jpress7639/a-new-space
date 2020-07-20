@@ -8,14 +8,14 @@ h1 {
     text-align: center;
     margin: 100px auto;
     font-family: biryani;
-    color: #f7f58f;
+    color: rgb(196, 196, 196);
 }
 
 button {
     border-radius: 20px;
     font-family: bungee shade;
     font-size: 40px;
-    background-color: #f7f58f;
+    background-color: rgb(239, 238, 238);
     width: 200px;
     height: 75px;
     margin: 20px;

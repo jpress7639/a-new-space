@@ -54,7 +54,7 @@ class SignIn extends Component {
         <form className='container'>
           <input type='text' name='email' onChange={this.handleChange} placeholder='Email' />
           <input type='password' name='password' onChange={this.handleChange} placeholder='Password' />
-          <button onClick={this.handleClick}>Lets Jam</button>
+          <button className='sign-in-button' onClick={this.handleClick}>LET'S JAM</button>
           <p className='user-response'></p>
         </form>
         <h3><Link to='/users/create-users'>Sign Up</Link></h3>
