@@ -18,11 +18,12 @@ class AccountDetail extends Component {
       }
     }
 
-    async componentDidMount() {
-        let { id } = this.props.match.params
-        const user = await getUser(id)
-        this.setState({user})
-    }
+  async componentDidMount() {
+      let { id } = this.props.match.params
+      const user = await getUser(id)
+      this.setState({user})
+  }
+  
   handleClick() {
     const { user } = this.state
     deleteUser(user._id)
@@ -47,7 +48,7 @@ class AccountDetail extends Component {
             </div>
             <div className="route-buttons">
                 <button><Link to={`/users/${user._id}/edit`}>Update My Account</Link></button>
-                <button onClick={() => deleteUser(user._id)}>Delete My Account</button>
+                <button onClick={() => this.handleClick()}>Delete My Account</button>
             </div>
             </Layout>
         </div>
