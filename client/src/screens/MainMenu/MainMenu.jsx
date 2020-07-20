@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { getUser } from '../../Services/users'
+import { getUser } from '../../Services/users.js'
+import SongLayout from '../../components/shared/SongPlaylistLayout/SongLayout.jsx'
 import Layout from "../../components/shared/Layout/Layout"
 import './MainMenu.css'
 
@@ -18,13 +19,12 @@ class MainMenu extends Component {
   }
 
   render() {
-    const { firstName } = this.state.user
+    const { firstName, lastName } = this.state.user
     return (
       <div className='main-menu-container'>
-      <Layout id={this.state.user._id}>
-      <div className="welcome">
-        <h3>Welcome {firstName}, <br></br> let's take you to your <span className="emphasis">space!</span> </h3>
-        </div>
+        <Layout id={this.state.user._id}>
+          <p>Welcome {firstName} {lastName}, let's take you to your space! </p>
+        <SongLayout />
         </Layout>
       </div>
     )}

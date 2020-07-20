@@ -1,23 +1,20 @@
-import React from "react"
-import Layout from "../Layout/Layout"
-import playlist from "../playlist/playlist.json"
+import React, { Component } from "react"
+import playlist from "../../../playlist/playlist.json"
+import "./SongLayout.css"
 
-class SongLayout {
+class SongLayout extends Component {
 
-
-    render() {
+  render() {
+      
         return(
             <>
-            <Layout>
             <div className="playlist-menu">
-            <img src="" alt="playlist-cover"></img>
+            <img src={playlist[0].imgURL} alt="playlist-cover"></img>
             </div>
-            <div className="song">
-                <p>Back</p>
-                <h2>Song Title - Artist</h2>
-                <p>Next</p>
+              <div className="song">
+              <h2>Artist: {playlist[0].artist}</h2>
+              <h3>Song: {playlist[0].song}</h3>
             </div>
-            </Layout>
             </>
         )
     }

@@ -3,19 +3,19 @@
     "artist": "YELLOW MAGIC ORCHESTRA",
     "song": "Rydeen",
     "genre": "Dance/Electronic",
-    "imgURL": "https://imgur.com/MiOMexQ"
+    "imgURL": "https://res.cloudinary.com/dqou3lepc/image/upload/v1595275840/tokyo1_tzdd6h.jpg"
   },
   {
     "artist": "YELLOW MAGIC ORCHESTRA",
     "song": "Firecracker",
     "genre": "Dance/Electronic",
-    "imgURL": "https://imgur.com/Adj0uHE"
+    "imgURL": "https://res.cloudinary.com/dqou3lepc/image/upload/v1595275842/tokyo2_bs77st.jpg"
   },
   {
     "artist": "YELLOW MAGIC ORCHESTRA",
     "song": "Focus",
     "genre": "Dance/Electronic",
-    "imgURL": "https://imgur.com/AEUlze0"
+    "imgURL": "https://res.cloudinary.com/dqou3lepc/image/upload/v1595275843/tokyo3_qjactd.jpg"
   },
   {
     "artist": "Billie Marten",
@@ -39,18 +39,18 @@
     "artist": "Kendra Morris",
     "song": "Space Oddity",
     "genre": "Soul",
-    "imgURL": "https://imgur.com/UAtjWQN"
+    "imgURL": "https://res.cloudinary.com/dqou3lepc/image/upload/v1595275871/soul1_h5laqm.jpg"
   },
   {
     "artist": "Lianne La Havas",
     "song": "Please Don't Make Me Cry",
     "genre": "Soul",
-    "imgURL": "https://imgur.com/4PjXAGO"
+    "imgURL": "https://res.cloudinary.com/dqou3lepc/image/upload/v1595275876/soul2_qdjtys.jpg"
   },
   {
     "artist": "Jorja Smith",
     "song": "Rouse Rouge",
     "genre": "Soul",
-    "imgURL": "https://imgur.com/NAG11KR"
+    "imgURL": "https://res.cloudinary.com/dqou3lepc/image/upload/v1595275875/soul3_brcace.jpg"
   }
 ]
