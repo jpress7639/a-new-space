@@ -1,7 +1,10 @@
 import React from "react"
 import Layout from "../Layout/Layout"
+import playlist from "../playlist/playlist.json"
 
 class SongLayout {
+
+
     render() {
         return(
             <>

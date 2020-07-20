@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { getUser } from '../../Services/users.js'
+import SongLayout from '../../SongPlaylist/SongLayout.jsx'
 
 class MainMenu extends Component {
   constructor(props) {
@@ -12,7 +13,8 @@ class MainMenu extends Component {
   async componentDidMount() {
     let { id } = this.props.match.params
     const user = await getUser(id)
-    this.setState({user})
+    this.setState({ user })
+    console.log(SongLayout)
   }
 
   render() {
