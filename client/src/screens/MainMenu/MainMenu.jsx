@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { getUser } from '../../Services/users.js'
+import Layout from "../../components/shared/Layout/Layout"
+import './MainMenu.css'
 
 class MainMenu extends Component {
   constructor(props) {
@@ -20,8 +22,8 @@ class MainMenu extends Component {
     const {lastName} = this.state.user
     return (
       <Layout id={this.state.user._id}>
-      <div>
-        <p>Welcome {firstName} {lastName}, let's take you to your space! </p>
+      <div className="welcome">
+        <h3>Welcome {firstName}, <br></br> let's take you to your <span className="emphasis">space!</span> </h3>
         </div>
         </Layout>
     )}

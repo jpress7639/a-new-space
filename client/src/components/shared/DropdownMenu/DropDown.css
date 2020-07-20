@@ -4,25 +4,39 @@ div.dropdown {
     margin: 10px 50px;
 }
 
-
 div.hamburger {
     position: relative;
-    width: 20px;
-    height: 20px;
+    background: rgb(36, 40, 71);
+    padding: 20px;
+    transition: all 1s;
 }
+
+
+div.hamburger:hover{
+    background-color: rgba(210, 212, 244, 0.5);
+}
+
+
+div.hamburger div.line{
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    margin: -5px 10px;
+}
+
 
 div.dropdown-menu nav{
     background-color: rgba(210, 212, 244, 0.5);
     position: absolute;
+    right: 60px;
+    font-size: 25px;
+    padding: 5px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
-    height: 70%;
+    height: 60%;
     width: 20%;
+    transition: all 1s;
 }
 
-div.drop-down-menu nav h4{
-    color: white;
-    font-weight: bold;
-}
