@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { getUser } from '../../Services/users.js'
-import SongLayout from '../../SongPlaylist/SongLayout.jsx'
+import { getUser } from '../../Services/users'
 import Layout from "../../components/shared/Layout/Layout"
 import './MainMenu.css'
 
@@ -16,12 +15,10 @@ class MainMenu extends Component {
     let { id } = this.props.match.params
     const user = await getUser(id)
     this.setState({ user })
-    console.log(SongLayout)
   }
 
   render() {
     const { firstName } = this.state.user
-    const {lastName} = this.state.user
     return (
       <div className='main-menu-container'>
       <Layout id={this.state.user._id}>
