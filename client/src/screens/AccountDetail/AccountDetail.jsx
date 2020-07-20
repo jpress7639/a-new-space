@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { getUser, deleteUser } from "../../Services/users"
 import { Link, Redirect } from 'react-router-dom'
-import Layout from '../../components/shared/Layout'
+import Layout from '../../components/shared/Layout/Layout'
 
 class AccountDetail extends Component {
     constructor(props) {
@@ -30,6 +30,7 @@ class AccountDetail extends Component {
         }
         return (
         <div>
+            <Layout>
             <div className="user-profile">
                 <img src={user.imgURL}></img>
                 <h2>{user.firstName}{user.lastName}</h2>
@@ -39,6 +40,7 @@ class AccountDetail extends Component {
                 <button><Link to={`/users/${user._id}/edit`}>Update My Account</Link></button>
                 <button onClick={() => deleteUser(user._id)}>Delete My Account</button>
             </div>
+            </Layout>
         </div>
         )
     }

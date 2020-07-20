@@ -12,7 +12,7 @@ class DropDown extends Component{
     }
 
     async componentDidMount() {
-        let { id } = this.props.match.params
+        let id = this.props.props
         const user = await getUser(id)
         this.setState({user})
     }
@@ -26,7 +26,7 @@ class DropDown extends Component{
             <div className="dropdown-menu">
             <nav>
                 <Link to={`users/:id`}><p>Home</p></Link>
-                <Link to={`/users/${user._id}/edit`}><p>My Account</p></Link>
+                <Link to={`/users/:id/edit`}><p>My Account</p></Link>
                 <p>About</p>
                 <Link to={'/'}>Sign Out</Link>
             </nav>
