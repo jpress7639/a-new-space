@@ -1,6 +1,7 @@
 import Layout from '../../components/shared/Layout/Layout'
 import React, { Component } from 'react'
-import {getUser} from '../../Services/users.js'
+import { getUser } from '../../Services/users.js'
+import Layout from '../../components/shared/Layout/Layout'
 
 class MainMenu extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class MainMenu extends Component {
     const { firstName } = this.state.user
     const {lastName} = this.state.user
     return (
-      <Layout>
+      <Layout id={this.state.user._id}>
       <div>
         <p>Welcome {firstName} {lastName}, let's take you to your space! </p>
         </div>
