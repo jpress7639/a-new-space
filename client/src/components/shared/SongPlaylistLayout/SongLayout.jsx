@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import playlist from "../../../playlist/playlist.json";
-import "./SongLayout.css";
-// import {Link} from 'react-router-dom'
+import React, { Component } from "react"
+import playlist from "../../../playlist/playlist.json"
+import "./SongLayout.css"
+import {Link} from 'react-router-dom'
 
 class SongLayout extends Component {
   constructor() {
@@ -28,6 +28,7 @@ class SongLayout extends Component {
   };
 
   render() {
+    const { id } = this.props
     const genre = [...new Set(this.state.queriedRadioSearch.map((genre) => genre.genre))];
     console.log(genre);
     return (
@@ -41,7 +42,9 @@ class SongLayout extends Component {
           ></input>
           {genre.map((station) => (
             <div className="station-container">
-              <h3>{station} Station</h3>
+              <Link to={`/users/${id}/${station}`}>
+                <h3>{station} Station</h3>
+              </Link>
             </div>
           ))}
         </div>
