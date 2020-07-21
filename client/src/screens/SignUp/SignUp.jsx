@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Redirect, Link } from 'react-router-dom'
 import { createUser } from "../../Services/users"
 import './SignUp.css'
+import StarField from '../../components/StarAnimation/StarAnimation'
 
 class SignUp extends Component {
   constructor() {
@@ -41,6 +42,7 @@ class SignUp extends Component {
 
     return (
       <>
+      <StarField />
         <h1>Let's Get Started</h1>
           <form className= "signup-form">
             <input
