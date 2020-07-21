@@ -23,7 +23,7 @@ class MainMenu extends Component {
     return (
       <div className='main-menu-container'>
         <Layout id={this.state.user._id}>
-          <p>Welcome {firstName} {lastName}, let's take you to your space! </p>
+          <h4>Welcome {firstName}, <br></br> let's take you to your <span className="emphasis">space</span>! </h4>
         <SongLayout />
         </Layout>
       </div>

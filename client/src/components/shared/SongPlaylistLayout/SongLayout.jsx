@@ -6,14 +6,16 @@ import "./SongLayout.css"
 class SongLayout extends Component {
 
   render() {
+    const genre = [...new Set(playlist.map(genre => genre.genre))]
+    console.log(genre)
     return (
       <>
         <div className="playlist-menu">
         <h1 className='playlist-title'>SPACE TANK</h1>
           <input className='playlist-search-bar' placeholder='Search'></input>
-              {playlist.map(station => 
+              {genre.map(station => 
               <div className='station-container'>
-                <h3>{station.genre} Station</h3>
+                <h3>{station} Station</h3>
               </div>
               )}
         </div>

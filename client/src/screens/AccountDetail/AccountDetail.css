@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;700&family=Bungee&family=Bungee+Shade&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+div.user-profile{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 5px;
+    width: 700px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+div.user-profile img{
+    grid-column: 1 / 2;
+    height: 250px;
+    width: 300px;
+    margin: 30px 60px;
+    box-shadow: 10px 10px 35px 5px;
+    border-radius: 50px;
+}
+
+div.user-profile h2 {
+    margin-top: 90px;
+    grid-column: 2 / 3;
+    font-family: lato;
+    font-size: 40px;
+    color: white;
+}
+
+div.route-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+div.route-buttons button{
+    font-size: 20px;
+
+}
+
+div.route-buttons button a{
+    font-size: 20px;
+    font-family: bungee shade;
+}
+
+

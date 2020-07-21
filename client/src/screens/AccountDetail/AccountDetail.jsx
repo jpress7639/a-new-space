@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { getUser, deleteUser } from "../../Services/users"
 import { Link, Redirect } from 'react-router-dom'
 import Layout from '../../components/shared/Layout/Layout'
+import './AccountDetail.css'
 
 class AccountDetail extends Component {
     constructor(props) {
@@ -42,9 +43,8 @@ class AccountDetail extends Component {
         <Layout id={user._id}>
           <div className="user-profile">
             <img src={user.imgURL} alt={user.firstName}></img>
-              <h2>{user.firstName} {user.lastName}</h2>
-              <h3>{user.email}</h3>
-          </div>
+              <h2>{user.firstName} {user.lastName}<br></br>{user.email}</h2> 
+              </div> 
           <div className="route-buttons">
             <button><Link to={`/users/${user._id}/edit`}>Update My Account</Link></button>
             <button onClick={() => this.handleClick()}>Delete My Account</button>

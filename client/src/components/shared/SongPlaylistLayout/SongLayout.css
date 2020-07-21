@@ -15,6 +15,7 @@
   display: flex;
   flex-flow: column wrap;
   align-content: center;
+  margin-bottom: 50px;
 }
 .station-container {
   margin-top: 15px;
