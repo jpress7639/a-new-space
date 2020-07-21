@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-
 import StarfieldAnimation from 'react-starfield-animation'
 
 //adapted from https://github.com/transitive-bullshit/react-starfield-animation

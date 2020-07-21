@@ -43,7 +43,7 @@ class SignUp extends Component {
     return (
       <>
       <StarField />
-        <h1>Let's Get Started</h1>
+        <h1 className="started">Let's Get Started</h1>
           <form className= "signup-form">
             <input
               className="input-first"

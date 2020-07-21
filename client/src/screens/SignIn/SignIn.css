@@ -73,3 +73,25 @@ a {
   color: rgb(23, 23, 23);
   text-decoration: none;
 }
+
+@media (max-width: 425px) {
+
+  div.sign-in{
+    width: 60%;
+    height: 350px;
+  }
+
+  form input{
+    width: 75%;
+  }
+
+  button.sign-in-button{
+    width: 150px;
+    font-size: 20px;
+  }
+
+  a {
+    font-size: 20px;
+  }
+
+}
