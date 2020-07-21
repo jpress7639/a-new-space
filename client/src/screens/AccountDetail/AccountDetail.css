@@ -42,4 +42,28 @@ div.route-buttons button a{
     font-family: bungee shade;
 }
 
+@media (max-width: 425px) {
+    div.user-profile{
+        width: 300px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 20px auto;
+        padding-top: 40px;
+    }
+
+    div.user-profile img{
+        height: 200px;
+        width: 200px;
+        margin: -50px auto;
+    }
+
+    div.user-profile h2 {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
 
