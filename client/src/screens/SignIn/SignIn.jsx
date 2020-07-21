@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { getUsers } from '../../Services/users'
 import './SignIn.css'
 import {Redirect, Link} from 'react-router-dom'
+import StarField from '../../components/StarAnimation/StarAnimation'
 import './SignIn.css'
 
 class SignIn extends Component {
@@ -50,6 +51,7 @@ class SignIn extends Component {
     }
     return (
       <>
+        <StarField />
         <h1>Welcome</h1>
         <div className="sign-in">
         <form className='container'>
