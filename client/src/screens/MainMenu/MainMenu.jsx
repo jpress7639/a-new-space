@@ -19,7 +19,7 @@ class MainMenu extends Component {
   }
 
   render() {
-    const { firstName, lastName } = this.state.user
+    const { firstName } = this.state.user
     return (
       <div className='main-menu-container'>
         <Layout id={this.state.user._id}>
