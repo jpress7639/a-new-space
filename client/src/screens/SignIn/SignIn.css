@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;700&family=Bungee&family=Bungee+Shade&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+body {
+  background: radial-gradient(#01333d, #242847);
+}
+
+div.sign-in{
+  background-color: rgba(167, 171, 207, 0.7);
+  border-radius: 20px;
+  width: 40%;
+  margin: 30px auto;
+  height: 400px;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  font-family: bungee shade;
+  font-size: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form input {
+  font-family: briyani;
+  width: 33%;
+  height: 40px;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.sign-in-button {
+  background-color: rgb(196, 196, 196);
+  font-family: 'Carme', sans-serif;
+  margin: 10px auto;
+  width: 250px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: rgb(146, 146, 146);
+  border-radius: 30px;
+}
+
+.sign-in-button:hover{
+  background-color: rgb(36, 40, 71);
+  color: rgb(249, 248, 147);
+}
+
+.container input::placeholder {
+  padding-left: 20px;
+  font-family: 'Carme', sans-serif;
+  color: rgb(146, 146, 146);
+  font-weight: 900;
+}
+
+h3 {
+  text-align: center;
+  transition: all 2s;
+}
+
+h3:hover{
+  color: rgb(249, 248, 147);
+  transform: scale(1.1);
+}
+
+a {
+  font-family: biryani;
+  font-size: 30px;
+  text-align: right;
+  color: rgb(23, 23, 23);
+  text-decoration: none;
+}

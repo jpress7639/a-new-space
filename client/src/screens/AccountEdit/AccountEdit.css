@@ -1,0 +1,23 @@
+div.user-change {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+div.user-change img {
+    border-radius: 50px;
+    box-shadow: 10px 10px 25px 5px;
+    height: 250px;
+    width: 300px;
+    order: -1;
+}
+
+button.update{
+    margin: 20px auto;
+    width: 50%;
+}
+
+button.update:hover{
+    background-color: rgb(0, 19, 73);
+    color: rgb(244, 242, 129);
+}

@@ -1,7 +1,11 @@
 import React from 'react';
 import './App.css';
-import Home from './screens/MainMenu/MainMenu'
+import SignUp from './screens/SignUp/SignUp'
 import SignIn from './screens/SignIn/SignIn'
+import Home from './screens/Home/Home'
+import MainMenu from './screens/MainMenu/MainMenu'
+import AccountDetail from './screens/AccountDetail/AccountDetail'
+import AccountEdit from './screens/AccountEdit/AccountEdit'
 import {Switch, Route} from 'react-router-dom'
 
 function App() {
@@ -9,7 +13,11 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route exact path='/users' component={SignIn} />
+        <Route exact path='/users/sign-in-user' component={SignIn} />
+        <Route exact path='/users/create-users' component={SignUp} />
+        <Route exact path='/users/:id' component={MainMenu} />
+        <Route exact path='/users/:id/detail' component={AccountDetail}/>
+        <Route exact path='/users/:id/edit' component={AccountEdit}/>
       </Switch>
     </div>
   );

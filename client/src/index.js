@@ -7,6 +7,7 @@ import {BrowserRouter as Router} from 'react-router-dom'
 
 ReactDOM.render(
   <Router>
+    <link href="https://fonts.googleapis.com/css2?family=Carme" rel="stylesheet"/>
     <App />
   </Router>,
   document.getElementById('root')

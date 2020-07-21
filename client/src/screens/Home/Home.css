@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;700&family=Bungee&family=Bungee+Shade&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+body {
+    background-color: #242847;
+}
+
+h1 {
+    text-align: center;
+    margin: 100px auto;
+    font-family: biryani;
+    color: rgb(196, 196, 196);
+}
+
+button {
+    border-radius: 20px;
+    font-family: bungee shade;
+    font-size: 40px;
+    background-color: rgb(239, 238, 238);
+    width: 200px;
+    height: 75px;
+    margin: 20px;
+    transition: all 2s;
+}
+
+button:hover{
+    transform: scale(1.1);
+    box-shadow: 10px 10px 15px 5px rgba(249, 248, 154, 0.5);
+}

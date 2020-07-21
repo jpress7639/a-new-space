@@ -1,15 +1,15 @@
-import React from "React"
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
-import { createUser } from "../../services/users"
+import { Redirect, Link } from 'react-router-dom'
+import { createUser } from "../../Services/users"
+import './SignUp.css'
 
 class SignUp extends Component {
   constructor() {
     super()
     this.state = {
       user: {
-        firstname: '',
-        lastname: '',
+        firstName: '',
+        lastName: '',
         email: '',
         password: '',
       },
@@ -34,9 +34,9 @@ class SignUp extends Component {
   }
 
   render() {
-
+    const {created} = this.state
     if (created) {
-      return <Redirect to={`/users`} />
+      return <Redirect to={`/`} />
     }
 
     return (
@@ -46,13 +46,13 @@ class SignUp extends Component {
             <input
               className="input-first"
               placeholder="Full Name"
-              name="firstname"
+              name="firstName"
               onChange={this.handleChange}
             />
             <input
               className="input-last"
               placeholder="Last Name"
-              name="lastname"
+              name="lastName"
               onChange={this.handleChange}
             />
             <input
@@ -67,8 +67,7 @@ class SignUp extends Component {
               name="password"
               onChange={this.handleChange}
             />
-            <button type= 'submit' className= "signup-button">Sign Up</button>
-            {/* "Have an account?" link */}
+            <Link to='/'><button type='submit' className= "signup-button">SIGN UP</button></Link>
           </form>
       </>
     )
