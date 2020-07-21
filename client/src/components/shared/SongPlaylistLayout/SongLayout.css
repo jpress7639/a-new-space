@@ -28,6 +28,9 @@
   height: 50px;
   font-size: 20px;
 }
+.station-container h3 {
+  font-size: 20px;
+}
 
 @media (max-width: 425px) {
   .playlist-title{
