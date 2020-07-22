@@ -1,9 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;700&family=Bungee&family=Bungee+Shade&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 
+.Space{
+  background: url("https://media.giphy.com/media/YqVztN6vprUl5zG16o/giphy.gif");
+  background-size: cover;
+}
+
+.Wilderness{
+  background: url("https://media.giphy.com/media/KEMgGJgGyZvehcyT7Q/giphy.gif");
+  background-size: cover;
+}
+
+.Soul{
+  background: url("https://media.giphy.com/media/PgiBl7ODIQPl61bHVU/giphy.gif");
+  background-size: cover; 
+}
+
 h1 {
   font-size: 200%;
   margin: 12px;
+  color: rgb(69, 57, 102);
 }
+
 .radio-container {
   display: flex;
   flex-flow: row;

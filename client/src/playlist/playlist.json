@@ -2,37 +2,38 @@
   {
     "artist": "YELLOW MAGIC ORCHESTRA",
     "song": "Rydeen",
-    "genre": "Dance-Electronic",
+    "genre": "Space",
     "imgURL": "https://res.cloudinary.com/dqou3lepc/image/upload/v1595275840/tokyo1_tzdd6h.jpg"
   },
   {
     "artist": "YELLOW MAGIC ORCHESTRA",
     "song": "Firecracker",
-    "genre": "Dance-Electronic",
+    "genre": "Space",
     "imgURL": "https://res.cloudinary.com/dqou3lepc/image/upload/v1595275842/tokyo2_bs77st.jpg"
   },
   {
     "artist": "YELLOW MAGIC ORCHESTRA",
     "song": "Focus",
-    "genre": "Dance-Electronic",
+    "genre": "Space",
     "imgURL": "https://res.cloudinary.com/dqou3lepc/image/upload/v1595275843/tokyo3_qjactd.jpg"
   },
   {
     "artist": "Billie Marten",
     "song": "Bird",
-    "genre": "Folk",
-    "imgURL": "https://res.cloudinary.com/dkhiieq9p/image/upload/v1595252803/a3b0602abb2f75fe96b3adc46c70548a.200x200x1_xpspzl.jpg"
+    "genre": "Wilderness",
+    "imgURL": "https://res.cloudinary.com/dkhiieq9p/image/upload/v1595252803/a3b0602abb2f75fe96b3adc46c70548a.200x200x1_xpspzl.jpg",
+    "gif": "https://media.giphy.com/media/KEMgGJgGyZvehcyT7Q/giphy.gif"
   },
   {
     "artist": "Becca Stevens",
     "song": "Regina",
-    "genre": "Folk",
+    "genre": "Wilderness",
     "imgURL": "https://res.cloudinary.com/dkhiieq9p/image/upload/v1594319880/81QYx6sg6jL._SX522__vgjifs.jpg"
   },
   {
     "artist": "James Blake",
     "song": "The Color in Anything",
-    "genre": "Folk",
+    "genre": "Wilderness",
     "imgURL": "https://res.cloudinary.com/dkhiieq9p/image/upload/v1595253023/The_colour_in_anything_blake_du8dlo.jpg"
   },
   {

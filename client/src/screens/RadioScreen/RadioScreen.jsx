@@ -12,7 +12,8 @@ export default class RadioScreen extends Component {
       listOfSongs: [],
       artist: '',
       song: '',
-      index: 0
+      index: 0,
+      gif: ''
     }
   }
 
@@ -23,7 +24,8 @@ export default class RadioScreen extends Component {
       radioStation: chosenGenre,
       listOfSongs: filteredList[0],
       artist: filteredList[0][0].artist,
-      song: filteredList[0][0].song
+      song: filteredList[0][0].song,
+      gif: filteredList[0][0].gif
     })
   }
 
@@ -70,9 +72,8 @@ export default class RadioScreen extends Component {
 
   render() {
     let { index } = this.state
-
     return (
-      <div>
+      <body className={this.state.radioStation}>
         <div className='radio-container'>
 
           <div className='radio-title-container'>
@@ -95,7 +96,7 @@ export default class RadioScreen extends Component {
         <div className='radio-song-container'>
           <h2>"{this.state.song}" by {this.state.artist} </h2>
         </div> 
-      </div>
+      </body>
     )
   }
 }
