@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './RadioScreen.css'
 import playlist from "../../playlist/playlist.json"
 
 const next = 1
@@ -71,20 +72,30 @@ export default class RadioScreen extends Component {
     let { index } = this.state
 
     return (
-          <div>
-            <h1>{this.state.radioStation}</h1>
-            <h2>{this.state.song} </h2>
+      <div>
+        <div className='radio-container'>
 
-            <button onClick={(() => {
+          <div className='radio-title-container'>
+            <h1>SPACE TANK</h1>
+          </div>
+
+          <div className='radio-station-container'>
+            <h1 onClick={(() => {
               this.prevSong(index, prev) 
               })}>{'<'}
-            </button>
-
-            <button onClick={(() => {
+            </h1>
+            <h1>{this.state.radioStation} Station</h1>
+            <h1 onClick={(() => {
               this.nextSong(index, next) 
               })}>{'>'}
-            </button>
+            </h1>
           </div>
-      )
+
+        </div>
+        <div className='radio-song-container'>
+          <h2>"{this.state.song}" by {this.state.artist} </h2>
+        </div> 
+      </div>
+    )
   }
 }
