@@ -11,6 +11,7 @@ class SongLayout extends Component {
       queriedRadioSearch: [],
     };
   }
+
   //update initial values with full playlist
   async componentDidMount() {
     const totalPlaylist = playlist;
@@ -19,7 +20,9 @@ class SongLayout extends Component {
       queriedRadioSearch: totalPlaylist,
     });
   }
+
   //update the queriedRadioSearch with entered values of search bar
+
   handleSearch = (event) => {
     const queriedRadioSearch = playlist.filter((radio) =>
       radio.genre.toLowerCase().includes(event.target.value.toLowerCase())
@@ -28,9 +31,8 @@ class SongLayout extends Component {
   };
 
   render() {
-    const genre = [
-      ...new Set(this.state.queriedRadioSearch.map((genre) => genre.genre)),
-    ];
+    const { id } = this.props
+    const genre = [...new Set(this.state.queriedRadioSearch.map((genre) => genre.genre))];
     console.log(genre);
     return (
       <>
@@ -43,7 +45,9 @@ class SongLayout extends Component {
           ></input>
           {genre.map((station) => (
             <div className="station-container">
-              <h3>{station} Station</h3>
+              <Link to={`/users/${id}/${station}`}>
+                <h3>{station} Station</h3>
+              </Link>
             </div>
           ))}
         </div>
