@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './RadioScreen.css'
 import playlist from "../../playlist/playlist.json"
+import {Link} from 'react-router-dom'
 
 const next = 1
 const prev = -1
@@ -76,10 +77,12 @@ export default class RadioScreen extends Component {
       <body className={this.state.radioStation}>
         <div className='radio-container'>
 
-          <div className='radio-title-container'>
-            <h1>SPACE TANK</h1>
-          </div>
-
+          <Link to={`/users/${this.props.match.params.id}`}>
+            <div className='radio-title-container'>
+              <h1>SPACE TANK</h1>
+            </div>
+          </Link>
+          
           <div className='radio-station-container'>
             <h1 onClick={(() => {
               this.prevSong(index, prev) 
@@ -93,10 +96,12 @@ export default class RadioScreen extends Component {
           </div>
 
         </div>
+
         <div className='radio-song-container'>
           <h2>"{this.state.song}" by {this.state.artist} </h2>
         </div> 
+
       </body>
-    )
+    );
   }
 }

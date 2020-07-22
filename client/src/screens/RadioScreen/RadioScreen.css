@@ -16,7 +16,7 @@
 }
 
 h1 {
-  font-size: 200%;
+  font-size: 125%;
   margin: 12px;
   color: rgb(69, 57, 102);
 }
@@ -42,6 +42,7 @@ h1 {
 .radio-station-container {
   display: flex;
   margin-right: 40%;
+  padding-top: 10px;
 }
 
 .radio-song-container {
@@ -51,4 +52,27 @@ h1 {
   justify-content: center;
   flex-direction: row;
   color: rgb(229, 223, 199)
+}
+@media (max-width: 414px) {
+  h1 {
+    font-size: 100%;
+  }
+  h2 {
+    font-size: 120%;
+  }
+  .radio-container {
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+  }
+  .radio-title-container {
+    display: none;
+  }
+  .radio-station-container {
+    padding-left: 30%;
+  }
+  .radio-song-container {
+    display: flex;
+    margin-top: 140%;
+  }
 }
