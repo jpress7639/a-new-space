@@ -1,7 +1,7 @@
-import React, { Component } from "react"
-import playlist from "../../../playlist/playlist.json"
-import "./SongLayout.css"
-import {Link} from 'react-router-dom'
+import React, { Component } from "react";
+import playlist from "../../../playlist/playlist.json";
+import "./SongLayout.css";
+// import {Link} from 'react-router-dom'
 
 class SongLayout extends Component {
   constructor() {
@@ -12,6 +12,7 @@ class SongLayout extends Component {
     };
   }
 
+  //update initial values with full playlist
   async componentDidMount() {
     const totalPlaylist = playlist;
     this.setState({
@@ -19,6 +20,8 @@ class SongLayout extends Component {
       queriedRadioSearch: totalPlaylist,
     });
   }
+
+  //update the queriedRadioSearch with entered values of search bar
 
   handleSearch = (event) => {
     const queriedRadioSearch = playlist.filter((radio) =>
