@@ -45,6 +45,7 @@ h1 {
   .radio-container {
     position: absolute;
     bottom: 0;
+    background-color: transparent;
   }
   .radio-title-container {
     display: none;
