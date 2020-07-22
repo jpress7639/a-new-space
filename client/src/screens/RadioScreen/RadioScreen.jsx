@@ -72,7 +72,7 @@ export default class RadioScreen extends Component {
     let { index } = this.state
 
     return (
-      <div>
+      <>
         <div className='radio-container'>
 
           <div className='radio-title-container'>
@@ -92,10 +92,11 @@ export default class RadioScreen extends Component {
           </div>
 
         </div>
+
         <div className='radio-song-container'>
           <h2>"{this.state.song}" by {this.state.artist} </h2>
         </div> 
-      </div>
+      </>
     )
   }
 }

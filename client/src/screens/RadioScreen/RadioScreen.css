@@ -35,3 +35,25 @@ h1 {
   flex-direction: row;
   color: rgb(229, 223, 199)
 }
+@media (max-width: 414px) {
+  h1 {
+    font-size: 100%;
+  }
+  h2 {
+    font-size: 120%;
+  }
+  .radio-container {
+    position: absolute;
+    bottom: 0;
+  }
+  .radio-title-container {
+    display: none;
+  }
+  .radio-station-container {
+    padding-left: 30%;
+  }
+  .radio-song-container {
+    display: flex;
+    margin-top: 140%;
+  }
+}
