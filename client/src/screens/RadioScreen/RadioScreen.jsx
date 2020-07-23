@@ -117,10 +117,11 @@ export default class RadioScreen extends Component {
               })}>{'>'}
             </h1>
           </div>
-          <DropDown /> 
+          <DropDown className='dropdown'/> 
         </div>
 
         <div className='radio-song-container'>
+          <div className='checkbox-favorite-container'>
           <form onSubmit={this.handleFormSubmit}>
               <input
                 className='checkbox'
@@ -138,7 +139,8 @@ export default class RadioScreen extends Component {
             <rect x="-2.98023e-08" y="0.709754" width="18.9288" height="16.8848" transform="matrix(0.70445 0.709754 -0.70445 0.709754 21.3866 10.9597)" fill="#D2D4F4" stroke="#D2D4F4"/>
             </svg>
             </button>
-          </form>
+            </form>
+          </div>
           <h2 className='current-song'>"{this.state.song}" by {this.state.artist} </h2>
         </div> 
 
