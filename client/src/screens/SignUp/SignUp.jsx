@@ -42,6 +42,7 @@ class SignUp extends Component {
 
     return (
       <>
+      <div className="second-moon"></div>
       <StarField />
         <h1 className="started">Let's Get Started</h1>
           <form className= "signup-form">
