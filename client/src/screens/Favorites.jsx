@@ -13,9 +13,12 @@ class FavoritesLayout extends Component {
   }
 
   //update initial values with the info from local storage called 'stationArray'
-  async componentDidMount() {
+  componentDidMount() {
     //grab the data for stations variable from local storage
-    const stations = localStorage.getItem("stationArray") ? JSON.parse(localStorage.getItem("stationArray")) : playlist;
+    const stations = localStorage.getItem("stationArray")
+      ? JSON.parse(localStorage.getItem("stationArray"))
+      : this.state.playlist;
+    console.log(stations);
     this.setState({
       playlist: stations,
       queriedRadioSearch: stations,
@@ -33,9 +36,7 @@ class FavoritesLayout extends Component {
 
   render() {
     const { id } = this.props;
-    const genre = [
-      ...new Set(this.state.queriedRadioSearch.map((genre) => genre.genre)),
-    ];
+    const genre = [...new Set(this.state.queriedRadioSearch)];
     return (
       <>
         <div className="playlist-menu">
