@@ -34,7 +34,6 @@ class SongLayout extends Component {
   render() {
     const { id } = this.props
     const genre = [...new Set(this.state.queriedRadioSearch.map((genre) => genre.genre))];
-    console.log(genre);
     return (
       <>
         <div className="playlist-menu">

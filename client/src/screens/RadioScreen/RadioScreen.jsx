@@ -32,19 +32,21 @@ export default class RadioScreen extends Component {
   }
 
   nextSong = (n, next) => {
-    const {index} = this.state
-    if (this.state.index < this.state.listOfSongs.length - 1) {
+    const { index } = this.state
+    let { listOfSongs } = this.state
+    
+    if (this.state.index < listOfSongs.length - 1) {
       this.setState({
         index: (n + next)
       })
       this.setState({
-        artist: this.state.listOfSongs[index + 1].artist,
-        song: this.state.listOfSongs[index + 1].song
+        artist: listOfSongs[index + 1].artist,
+        song: listOfSongs[index + 1].song
       })
     } else {
       this.setState({
-        artist: this.state.listOfSongs[0].artist,
-        song: this.state.listOfSongs[0].song,
+        artist: listOfSongs[0].artist,
+        song: listOfSongs[0].song,
         index: 0
       })
     }
@@ -65,8 +67,8 @@ export default class RadioScreen extends Component {
 
     } else {
       this.setState({
-        artist: this.state.listOfSongs[listOfSongs.length - 1].artist,
-        song: this.state.listOfSongs[listOfSongs.length - 1].song,
+        artist: listOfSongs[listOfSongs.length - 1].artist,
+        song: listOfSongs[listOfSongs.length - 1].song,
         index: listOfSongs.length - 1
       })
     }
