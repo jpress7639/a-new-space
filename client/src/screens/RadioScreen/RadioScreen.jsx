@@ -102,11 +102,9 @@ export default class RadioScreen extends Component {
     return (
       <body className={this.state.radioStation}>
         <div className='radio-container'>
-          {/* <Link to={`/users/${id}`}> */}
             <div className='radio-title-container'>
               <h1>SPACE TANK</h1>
             </div>
-          {/* </Link>          */}
           <div className='radio-station-container'>
             <h1 onClick={(() => {
               this.prevSong(index, prev) 
