@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom'
 import playlist from "../../../playlist/playlist.json";
 import "./SongLayout.css";
 import { Link } from "react-router-dom";
@@ -40,11 +41,9 @@ class SongLayout extends Component {
   };
 
   render() {
-    const { id } = this.props;
-    const genre = [
-      ...new Set(this.state.queriedRadioSearch.map((genre) => genre.genre)),
-    ];
-    console.log(genre);
+
+    const { id } = this.props
+    const genre = [...new Set(this.state.queriedRadioSearch.map((genre) => genre.genre))];
     return (
       <>
         <div className="playlist-menu">

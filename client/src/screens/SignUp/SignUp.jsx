@@ -43,11 +43,11 @@ class SignUp extends Component {
     return (
       <>
       <StarField />
-        <h1 className="started">Let's Get Started</h1>
-          <form className= "signup-form">
+        <form className="signup-form">
+          <h1 className="started">LET'S GET STARTED</h1>
             <input
               className="input-first"
-              placeholder="Full Name"
+              placeholder="First Name"
               name="firstName"
               onChange={this.handleChange}
             />
@@ -69,7 +69,8 @@ class SignUp extends Component {
               name="password"
               onChange={this.handleChange}
             />
-            <Link to='/'><button type='submit' className= "signup-button">SIGN UP</button></Link>
+          <Link to='/'><button type='submit' className="signup-button">SIGN UP</button></Link>
+          <Link class='have-an-account' to='/users/sign-in-user'>Have an account?</Link>
           </form>
       </>
     )

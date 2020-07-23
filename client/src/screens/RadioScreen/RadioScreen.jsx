@@ -1,5 +1,8 @@
-import React, { Component } from "react";
-import playlist from "../../playlist/playlist.json";
+import React, { Component } from 'react'
+import './RadioScreen.css'
+import playlist from "../../playlist/playlist.json"
+import {Link} from 'react-router-dom'
+import DropDown from '../../components/shared/DropdownMenu/DropDown'
 
 const next = 1;
 const prev = -1;
@@ -13,8 +16,9 @@ export default class RadioScreen extends Component {
       song: "",
       index: 0,
       favoriteMe: false,
-      testArray: [],
+      gif: ''
     };
+
   }
 
   async componentDidMount() {
@@ -27,7 +31,8 @@ export default class RadioScreen extends Component {
       listOfSongs: filteredList[0],
       artist: filteredList[0][0].artist,
       song: filteredList[0][0].song,
-    });
+      gif: filteredList[0][0].gif
+    })
   }
   //updates whether the favorites box has been checked or not
   handleChange = (event) => {
@@ -49,21 +54,23 @@ export default class RadioScreen extends Component {
   };
 
   nextSong = (n, next) => {
-    const { index } = this.state;
-    if (this.state.index < this.state.listOfSongs.length - 1) {
+    const { index } = this.state
+    let { listOfSongs } = this.state
+    
+    if (this.state.index < listOfSongs.length - 1) {
       this.setState({
         index: n + next,
       });
       this.setState({
-        artist: this.state.listOfSongs[index + 1].artist,
-        song: this.state.listOfSongs[index + 1].song,
-      });
+        artist: listOfSongs[index + 1].artist,
+        song: listOfSongs[index + 1].song
+      })
     } else {
       this.setState({
-        artist: this.state.listOfSongs[0].artist,
-        song: this.state.listOfSongs[0].song,
-        index: 0,
-      });
+        artist: listOfSongs[0].artist,
+        song: listOfSongs[0].song,
+        index: 0
+      })
     }
   };
 
@@ -81,21 +88,18 @@ export default class RadioScreen extends Component {
       });
     } else {
       this.setState({
-        artist: this.state.listOfSongs[listOfSongs.length - 1].artist,
-        song: this.state.listOfSongs[listOfSongs.length - 1].song,
-        index: listOfSongs.length - 1,
-      });
+        artist: listOfSongs[listOfSongs.length - 1].artist,
+        song: listOfSongs[listOfSongs.length - 1].song,
+        index: listOfSongs.length - 1
+      })
     }
   };
 
   render() {
-    let { index } = this.state;
-
+    let { index } = this.state
     return (
-      <div>
-        <div>
-          <h1>{this.state.radioStation}</h1>
-          <form onSubmit={this.handleFormSubmit}>
+      <body className={this.state.radioStation}>
+      <form onSubmit={this.handleFormSubmit}>
             <label>
               <input
                 name="favoriteMe"
@@ -107,25 +111,34 @@ export default class RadioScreen extends Component {
             </label>
             <button type="submit">Click to Add</button>
           </form>
-          <h2>{this.state.song} </h2>
+        <DropDown/>
+        <div className='radio-container'>
+
+          <Link to={`/users/${this.props.match.params.id}`}>
+            <div className='radio-title-container'>
+              <h1>SPACE TANK</h1>
+            </div>
+          </Link>
+          
+          <div className='radio-station-container'>
+            <h1 onClick={(() => {
+              this.prevSong(index, prev) 
+              })}>{'<'}
+            </h1>
+            <h1>{this.state.radioStation} Station</h1>
+            <h1 onClick={(() => {
+              this.nextSong(index, next) 
+              })}>{'>'}
+            </h1>
+          </div>
+
         </div>
 
-        <button
-          onClick={() => {
-            this.prevSong(index, prev);
-          }}
-        >
-          {"<"}
-        </button>
+        <div className='radio-song-container'>
+          <h2>"{this.state.song}" by {this.state.artist} </h2>
+        </div> 
 
-        <button
-          onClick={() => {
-            this.nextSong(index, next);
-          }}
-        >
-          {">"}
-        </button>
-      </div>
+      </body>
     );
   }
 }
