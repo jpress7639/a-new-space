@@ -1,16 +1,12 @@
 import React, { Component } from "react";
-import playlist from "../../../playlist/playlist.json";
-import "./SongLayout.css";
+import playlist from "../playlist/playlist.json";
+import "../components/shared/SongPlaylistLayout/SongLayout.css";
 import { Link } from "react-router-dom";
 
 class SongLayout extends Component {
   constructor() {
     super();
     this.state = {
-      //set the station 
-      station: "",
-      //set initial value of favoriteMe to null
-      favoriteMe: null,
       playlist: [],
       queriedRadioSearch: [],
     };
@@ -19,13 +15,10 @@ class SongLayout extends Component {
   //update initial values with full playlist
   async componentDidMount() {
     //grab the data for favoriteMe and radioStation from local storage
-    const favoriteMe = localStorage.getItem("favoriteMe") === "true";
-    const station = favoriteMe ? localStorage.getItem("radioStation") : "";
+    const stations = localStorage.getItem("stationArray") ? JSON.parse(localStorage.getItem("stationArray")) : this.state.playlist;
     const totalPlaylist = playlist;
     this.setState({
-      station,
-      favoriteMe,
-      playlist: totalPlaylist,
+      playlist: stations,
       queriedRadioSearch: totalPlaylist,
     });
   }
