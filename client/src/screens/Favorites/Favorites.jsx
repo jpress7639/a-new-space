@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import playlist from "../playlist/playlist.json";
-import "../components/shared/SongPlaylistLayout/SongLayout.css";
+import playlist from "../../playlist/playlist.json";
+import "../../components/shared/SongPlaylistLayout/SongLayout.css";
 import { Link } from "react-router-dom";
 
 class FavoritesLayout extends Component {

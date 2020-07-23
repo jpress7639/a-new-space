@@ -4,6 +4,17 @@ body {
   background: radial-gradient(#01333d, #242847);
 }
 
+div.second-moon{
+  background: url("https://res.cloudinary.com/dkhiieq9p/image/upload/v1595519732/Spacetank_Full_Moon_2_1_tls4qd.svg");
+  background-size: cover;
+  position: absolute;
+  bottom: -600px;
+  left: 2.5%;
+  width: 1200px;
+  height: 1200px;
+  z-index: -50;
+}
+
 div.sign-in{
   border-radius: 20px;
   width: 30%;

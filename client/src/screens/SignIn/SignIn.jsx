@@ -52,6 +52,7 @@ class SignIn extends Component {
     return (
       <>
         <StarField />
+        <div className="second-moon"></div>
         <div className="sign-in">
         <h1 className='sign-in-title'>WELCOME</h1>
         <form className='container'>
