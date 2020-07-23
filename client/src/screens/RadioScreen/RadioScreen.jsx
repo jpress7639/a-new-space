@@ -141,8 +141,8 @@ export default class RadioScreen extends Component {
             </button>
           </form>
           <Modal />
-          <h2 className='current-song'>"{this.state.song}" by {this.state.artist} </h2>
         </div> 
+        <h2 className='current-song'>"{this.state.song}" by {this.state.artist} </h2>
         </div>
       </body>
     );

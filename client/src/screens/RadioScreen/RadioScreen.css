@@ -50,22 +50,27 @@ h1 {
 }
 
 .radio-song-container {
-  margin-top: 40%;
+  margin-top: 30%;
   background-color: rgba(210, 212, 244, 0.42);
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-content: center;
   flex-direction: row;
+  flex-wrap: nowrap;
   color: rgb(240, 235, 218)
 }
 .radio-song-container form {
   display: flex;
+  justify-content: space-evenly;
   flex-flow: row nowrap;
 }
 .checkbox-favorite-container {
-  padding-right: 25%;
-  margin-left: 10px;
+  display: flex;
+  padding-right: 15%;
+  margin-left: 15px;
+  width: 100px;
 }
+
 .checkbox {
   margin-top: 35px;
   width: 30px;

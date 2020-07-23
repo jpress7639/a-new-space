@@ -1,11 +1,13 @@
 .modal-container {
-  background: white;
+  background: transparent;
   width: 200px;
   border: 1px solid black;
   margin: 0 auto;
+  border: none;
 }
 
-.toggle-social {
+button.social {
+  margin-top: 30px;
   width: 15px;
   height: 15px;
 }
