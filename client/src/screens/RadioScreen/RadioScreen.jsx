@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import './RadioScreen.css'
 import playlist from "../../playlist/playlist.json"
-import {Link} from 'react-router-dom'
 import DropDown from '../../components/shared/DropdownMenu/DropDown'
-import Modal from '../../components/Modal/Modal'
+
 
 const next = 1;
 const prev = -1;
@@ -98,7 +97,6 @@ export default class RadioScreen extends Component {
 
   render() {
     let { index } = this.state
-    let {id} = this.props.match.params
     return (
       <body className={this.state.radioStation}>
         <div className='radio-container'>
@@ -116,7 +114,7 @@ export default class RadioScreen extends Component {
               })}>{'>'}
             </h1>
           </div>
-          <DropDown className='dropdown'/> 
+          <DropDown /> 
         </div>
 
         <div className='radio-song-container'>
