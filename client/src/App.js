@@ -7,7 +7,7 @@ import MainMenu from './screens/MainMenu/MainMenu'
 import AccountDetail from './screens/AccountDetail/AccountDetail'
 import AccountEdit from './screens/AccountEdit/AccountEdit'
 import RadioScreen from './screens/RadioScreen/RadioScreen'
-import Favorites from './screens/Favorites'
+import FavoritesLayout from './screens/Favorites/Favorites'
 import {Switch, Route} from 'react-router-dom'
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         <Route exact path='/users/:id/detail' component={AccountDetail}/>
         <Route exact path='/users/:id/edit' component={AccountEdit} />
         <Route exact path='/users/:id/:genre' component={RadioScreen} />
-        <Route exact path="/users/favorites" component={Favorites} />
+        <Route exact path="/users/favorites" component={FavoritesLayout} />
       </Switch>
     </div>
   );

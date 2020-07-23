@@ -99,27 +99,13 @@ export default class RadioScreen extends Component {
     let { index } = this.state
     return (
       <body className={this.state.radioStation}>
-      <form onSubmit={this.handleFormSubmit}>
-            <label>
-              <input
-                name="favoriteMe"
-                checked={this.state.favoriteMe}
-                onChange={this.handleChange}
-                type="checkbox"
-              />{" "}
-              Favorite me
-            </label>
-            <button type="submit">Click to Add</button>
-          </form>
-        <DropDown/>
+      
         <div className='radio-container'>
-
           <Link to={`/users/${this.props.match.params.id}`}>
             <div className='radio-title-container'>
               <h1>SPACE TANK</h1>
             </div>
-          </Link>
-          
+          </Link>         
           <div className='radio-station-container'>
             <h1 onClick={(() => {
               this.prevSong(index, prev) 
@@ -131,11 +117,29 @@ export default class RadioScreen extends Component {
               })}>{'>'}
             </h1>
           </div>
-
+          <DropDown /> 
         </div>
 
         <div className='radio-song-container'>
-          <h2>"{this.state.song}" by {this.state.artist} </h2>
+          <form onSubmit={this.handleFormSubmit}>
+              <input
+                className='checkbox'
+                name="favoriteMe"
+                checked={this.state.favoriteMe}
+                onChange={this.handleChange}
+                type="checkbox"
+              />
+          <button type='submit' className='favorites'>
+            <svg width="44" height="42" viewBox="0 0 44 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="22" cy="21" rx="22" ry="21" fill="white"/>
+            <circle r="9.46439" transform="matrix(0.70445 -0.709754 0.70445 0.709754 15.9138 17.8147)" fill="#D2D4F4" stroke="#D2D4F4"/>
+            <rect x="0.70445" width="18.9288" height="16.8848" transform="matrix(0.70445 -0.709754 0.70445 0.709754 9.28266 25.5682)" fill="#D2D4F4" stroke="#D2D4F4"/>
+            <circle r="9.46439" transform="matrix(0.70445 0.709754 -0.70445 0.709754 28.0867 17.6453)" fill="#D2D4F4" stroke="#D2D4F4"/>
+            <rect x="-2.98023e-08" y="0.709754" width="18.9288" height="16.8848" transform="matrix(0.70445 0.709754 -0.70445 0.709754 21.3866 10.9597)" fill="#D2D4F4" stroke="#D2D4F4"/>
+            </svg>
+            </button>
+          </form>
+          <h2 className='current-song'>"{this.state.song}" by {this.state.artist} </h2>
         </div> 
 
       </body>
