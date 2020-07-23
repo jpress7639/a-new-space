@@ -49,7 +49,7 @@ div.dropdown-menu nav{
     }
 
     div.hamburger {
-        padding: 10px 5px
+        padding: 10px 3px
     }
 
     div.hamburger div.line{
@@ -58,11 +58,11 @@ div.dropdown-menu nav{
 
     div.dropdown-menu nav{
         height: 75%;
-        width: 33%;
-        right: 10px;
+        width: 50%;
+        right: 60px;
         justify-content: flex-start;
         align-items: flex-start;
-        background-color: rgba(178, 183, 247, 0.9)
+        background-color: transparent;
     }
 
     div.dropdown-menu nav :link{
