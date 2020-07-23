@@ -16,18 +16,26 @@ div.second-moon{
 }
 
 div.sign-in{
-  background-color: rgba(167, 171, 207, 0.7);
   border-radius: 20px;
-  width: 40%;
-  margin: 30px auto;
-  height: 400px;
+  width: 30%;
+  margin: 60px auto;
+  padding-top: 30px;
+  height: 500px;
+  background-color: rgba(210, 212, 244, 0.42);
 }
 
+.sign-in-title {
+  padding-top: 3%;
+  padding-bottom: 13%;
+  color: white;
+  font-family: Arial;
+  font-size: 180%;
+  letter-spacing: 0.2em;
+}
 h1 {
   text-align: center;
   margin: 0 auto;
   font-family: bungee shade;
-  font-size: 50px;
 }
 
 form {
@@ -38,7 +46,7 @@ form {
 
 form input {
   font-family: briyani;
-  width: 33%;
+  width: 55%;
   height: 40px;
   margin: 10px auto;
   border-radius: 10px;
@@ -47,8 +55,10 @@ form input {
 .sign-in-button {
   background-color: rgb(196, 196, 196);
   font-family: 'Carme', sans-serif;
-  margin: 10px auto;
-  width: 250px;
+  margin: 40px auto;
+  width: 180px;
+  height: 40px;
+  font-size: 20px;
   font-weight: 900;
   letter-spacing: 5px;
   color: rgb(146, 146, 146);
@@ -79,7 +89,7 @@ h3:hover{
 
 a {
   font-family: biryani;
-  font-size: 30px;
+  font-size: 20px;
   text-align: right;
   color: rgb(23, 23, 23);
   text-decoration: none;
@@ -89,15 +99,19 @@ a {
 
   div.sign-in{
     width: 60%;
-    height: 350px;
+    height: 300px;
+    background-color: transparent;
   }
 
   form input{
-    width: 75%;
+    width: 100%;
   }
 
   button.sign-in-button{
-    width: 150px;
+    margin-top: 70px;
+    font-weight: 900;
+    width: 200px;
+    height: 45px;
     font-size: 20px;
   }
 
