@@ -3,7 +3,7 @@ import playlist from "../playlist/playlist.json";
 import "../components/shared/SongPlaylistLayout/SongLayout.css";
 import { Link } from "react-router-dom";
 
-class SongLayout extends Component {
+class FavoritesLayout extends Component {
   constructor() {
     super();
     this.state = {
@@ -12,14 +12,16 @@ class SongLayout extends Component {
     };
   }
 
-  //update initial values with full playlist
-  async componentDidMount() {
-    //grab the data for favoriteMe and radioStation from local storage
-    const stations = localStorage.getItem("stationArray") ? JSON.parse(localStorage.getItem("stationArray")) : this.state.playlist;
-    const totalPlaylist = playlist;
+  //update initial values with the info from local storage called 'stationArray'
+  componentDidMount() {
+    //grab the data for stations variable from local storage
+    const stations = localStorage.getItem("stationArray")
+      ? JSON.parse(localStorage.getItem("stationArray"))
+      : this.state.playlist;
+    console.log(stations);
     this.setState({
       playlist: stations,
-      queriedRadioSearch: totalPlaylist,
+      queriedRadioSearch: stations,
     });
   }
 
@@ -34,10 +36,7 @@ class SongLayout extends Component {
 
   render() {
     const { id } = this.props;
-    const genre = [
-      ...new Set(this.state.queriedRadioSearch.map((genre) => genre.genre)),
-    ];
-    console.log(genre);
+    const genre = [...new Set(this.state.queriedRadioSearch)];
     return (
       <>
         <div className="playlist-menu">
@@ -60,4 +59,4 @@ class SongLayout extends Component {
   }
 }
 
-export default SongLayout;
+export default FavoritesLayout;
