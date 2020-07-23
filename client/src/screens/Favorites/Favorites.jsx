@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import playlist from "../playlist/playlist.json";
-import "../components/shared/SongPlaylistLayout/SongLayout.css";
+import playlist from "../../playlist/playlist.json";
+import "../../components/shared/SongPlaylistLayout/SongLayout.css";
 import { Link } from "react-router-dom";
 
-class SongLayout extends Component {
+class FavoritesLayout extends Component {
   constructor() {
     super();
     this.state = {
@@ -60,4 +60,4 @@ class SongLayout extends Component {
   }
 }
 
-export default SongLayout;
+export default FavoritesLayout;
