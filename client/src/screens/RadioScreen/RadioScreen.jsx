@@ -100,7 +100,6 @@ export default class RadioScreen extends Component {
     let { index } = this.state
     return (
       <body className={this.state.radioStation}>
-      
         <div className='radio-container'>
           <Link to={`/users/${this.props.match.params.id}`}>
             <div className='radio-title-container'>
@@ -144,7 +143,7 @@ export default class RadioScreen extends Component {
           <Modal />
           <h2 className='current-song'>"{this.state.song}" by {this.state.artist} </h2>
         </div> 
-
+        </div>
       </body>
     );
   }
