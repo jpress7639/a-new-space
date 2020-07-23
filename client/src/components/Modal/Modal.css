@@ -4,3 +4,8 @@
   border: 1px solid black;
   margin: 0 auto;
 }
+
+.toggle-social {
+  width: 15px;
+  height: 15px;
+}

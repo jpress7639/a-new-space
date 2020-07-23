@@ -4,14 +4,30 @@ body {
     background-color: #242847;
 }
 
-h1 {
+
+.first-moon {
+    background: url("https://res.cloudinary.com/dkhiieq9p/image/upload/v1595519732/Spacetank_Full_Moon_2_1_tls4qd.svg");
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    right: 150px;
+    top: 50px;
+}
+
+h1.intro {
     text-align: center;
-    margin: 100px auto;
+    margin: 50px auto;
+    padding-top: 20%;
+
     font-family: biryani;
+    font-size: 35px;
     color: rgb(196, 196, 196);
+    font-size: 220%;
 }
 
 button {
+    color: black;
     border-radius: 20px;
     font-family: bungee shade;
     font-size: 40px;
@@ -20,9 +36,22 @@ button {
     height: 75px;
     margin: 20px;
     transition: all 2s;
+    box-shadow: 0px 5px 8px #000000;
 }
 
 button:hover{
     transform: scale(1.1);
     box-shadow: 10px 10px 15px 5px rgba(249, 248, 154, 0.5);
+}
+
+@media ( max-width:425px ) {
+    .first-moon{
+        height: 100px;
+        width: 100px;
+        right: 50px;
+    }
+
+    h1.intro{
+        margin: 200px auto;
+    }
 }
