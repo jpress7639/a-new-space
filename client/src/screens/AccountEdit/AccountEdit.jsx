@@ -54,7 +54,7 @@ class AccountEdit extends Component {
             {/* <h3>{user.firstName} {user.lastName}</h3> */}
             <img src={user.imgURL} alt={user.firstName}></img>
             </div>
-                <form onSubmit={this.handleSubmit}>
+                <form className="edit" onSubmit={this.handleSubmit}>
                     <input placeholder="First Name" value={user.firstName} name="firstName" required onChange={this.handleChange}></input>
                     <input placeholder="Last Name" value={user.lastName} name="lastName" required onChange={this.handleChange}></input>
                     <input placeholder="New Email" value={user.email} name="email" required onChange={this.handleChange}></input>

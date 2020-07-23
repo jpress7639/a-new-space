@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { getUsers } from '../../Services/users'
 import './SignIn.css'
 import {Redirect, Link} from 'react-router-dom'
+import StarField from '../../components/StarAnimation/StarAnimation'
 import './SignIn.css'
 
 class SignIn extends Component {
@@ -39,7 +40,7 @@ class SignIn extends Component {
         signedIn: true
       })
     } else {
-      alert('User not found')
+      alert('User not found, Please type a valid email or password')
     }
   }
   
@@ -50,15 +51,16 @@ class SignIn extends Component {
     }
     return (
       <>
-        <h1>Welcome</h1>
+        <StarField />
+        <div className="second-moon"></div>
         <div className="sign-in">
+        <h1 className='sign-in-title'>WELCOME</h1>
         <form className='container'>
           <input type='text' name='email' onChange={this.handleChange} placeholder='Email' />
           <input type='password' name='password' onChange={this.handleChange} placeholder='Password' />
           <button className='sign-in-button' onClick={this.handleClick}>LET'S JAM</button>
-          <p className='user-response'></p>
         </form>
-        <h3><Link to='/users/create-users'>Sign Up</Link></h3>
+        <h3><Link to='/users/create-users'>Sign up</Link></h3>
         </div>
       </>
     )

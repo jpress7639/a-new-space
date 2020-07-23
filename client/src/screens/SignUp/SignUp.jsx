@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Redirect, Link } from 'react-router-dom'
 import { createUser } from "../../Services/users"
 import './SignUp.css'
+import StarField from '../../components/StarAnimation/StarAnimation'
 
 class SignUp extends Component {
   constructor() {
@@ -41,11 +42,13 @@ class SignUp extends Component {
 
     return (
       <>
-        <h1>Let's Get Started</h1>
-          <form className= "signup-form">
+      <div className="second-moon"></div>
+      <StarField />
+        <form className="signup-form">
+          <h1 className="started">LET'S GET STARTED</h1>
             <input
               className="input-first"
-              placeholder="Full Name"
+              placeholder="First Name"
               name="firstName"
               onChange={this.handleChange}
             />
@@ -67,7 +70,8 @@ class SignUp extends Component {
               name="password"
               onChange={this.handleChange}
             />
-            <Link to='/'><button type='submit' className= "signup-button">SIGN UP</button></Link>
+          <Link to='/'><button type='submit' className="signup-button">SIGN UP</button></Link>
+          <Link class='have-an-account' to='/users/sign-in-user'>Have an account?</Link>
           </form>
       </>
     )

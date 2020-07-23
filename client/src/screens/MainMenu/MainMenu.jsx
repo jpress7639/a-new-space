@@ -19,12 +19,12 @@ class MainMenu extends Component {
   }
 
   render() {
-    const { firstName, lastName } = this.state.user
+    const { firstName } = this.state.user
     return (
       <div className='main-menu-container'>
         <Layout id={this.state.user._id}>
-          <h4>Welcome {firstName}, <br></br> let's take you to your <span className="emphasis">space</span>! </h4>
-        <SongLayout />
+          <h4>Welcome {firstName}, <br></br> let's take you to your </h4>
+        <SongLayout id={this.state.user._id}/>
         </Layout>
       </div>
     )}
