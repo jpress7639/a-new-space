@@ -49,7 +49,7 @@ form input {
   color: rgb(249, 248, 147);
 }
 
-.container input::placeholder {
+.container input {
   padding-left: 20px;
   font-family: 'Carme', sans-serif;
   color: rgb(146, 146, 146);
