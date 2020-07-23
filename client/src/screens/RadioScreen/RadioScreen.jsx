@@ -118,10 +118,11 @@ export default class RadioScreen extends Component {
               })}>{'>'}
             </h1>
           </div>
-          <DropDown /> 
+          <DropDown className='dropdown'/> 
         </div>
 
         <div className='radio-song-container'>
+          <div className='checkbox-favorite-container'>
           <form onSubmit={this.handleFormSubmit}>
               <input
                 className='checkbox'
