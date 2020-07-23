@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './RadioScreen.css'
 import playlist from "../../playlist/playlist.json"
 import {Link} from 'react-router-dom'
+import DropDown from '../../components/shared/DropdownMenu/DropDown'
 
 const next = 1
 const prev = -1
@@ -75,6 +76,7 @@ export default class RadioScreen extends Component {
     let { index } = this.state
     return (
       <body className={this.state.radioStation}>
+        <DropDown/>
         <div className='radio-container'>
 
           <Link to={`/users/${this.props.match.params.id}`}>

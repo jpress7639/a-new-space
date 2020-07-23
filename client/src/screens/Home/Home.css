@@ -4,10 +4,11 @@ body {
     background-color: #242847;
 }
 
-h1 {
+h1.intro {
     text-align: center;
-    margin: 100px auto;
+    margin: 200px auto;
     font-family: biryani;
+    font-size: 35px;
     color: rgb(196, 196, 196);
 }
 
