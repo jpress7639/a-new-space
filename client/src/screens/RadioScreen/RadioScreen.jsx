@@ -3,6 +3,7 @@ import './RadioScreen.css'
 import playlist from "../../playlist/playlist.json"
 import {Link} from 'react-router-dom'
 import DropDown from '../../components/shared/DropdownMenu/DropDown'
+import Modal from '../../components/Modal/Modal'
 
 const next = 1;
 const prev = -1;
@@ -117,10 +118,11 @@ export default class RadioScreen extends Component {
               })}>{'>'}
             </h1>
           </div>
-          <DropDown /> 
+          <DropDown className='dropdown'/> 
         </div>
 
         <div className='radio-song-container'>
+          <div className='checkbox-favorite-container'>
           <form onSubmit={this.handleFormSubmit}>
               <input
                 className='checkbox'
@@ -139,6 +141,7 @@ export default class RadioScreen extends Component {
             </svg>
             </button>
           </form>
+          <Modal />
           <h2 className='current-song'>"{this.state.song}" by {this.state.artist} </h2>
         </div> 
 
