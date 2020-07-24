@@ -19,7 +19,6 @@ class FavoritesLayout extends Component {
     const stations = localStorage.getItem("stationArray")
       ? JSON.parse(localStorage.getItem("stationArray"))
       : this.state.playlist;
-    console.log(stations);
     this.setState({
       playlist: stations,
       queriedRadioSearch: stations,
@@ -27,7 +26,6 @@ class FavoritesLayout extends Component {
   }
 
   //update the queriedRadioSearch with entered values of search bar
-
   handleSearch = (event) => {
     const queriedRadioSearch = playlist.filter((radio) =>
       radio.genre.toLowerCase().includes(event.target.value.toLowerCase())

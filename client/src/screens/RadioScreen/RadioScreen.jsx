@@ -3,7 +3,6 @@ import './RadioScreen.css'
 import playlist from "../../playlist/playlist.json"
 import DropDown from '../../components/shared/DropdownMenu/DropDown'
 
-
 const next = 1;
 const prev = -1;
 export default class RadioScreen extends Component {
@@ -18,7 +17,6 @@ export default class RadioScreen extends Component {
       favoriteMe: false,
       gif: ''
     };
-
   }
 
   async componentDidMount() {

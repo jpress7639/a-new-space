@@ -7,7 +7,7 @@ class SongLayout extends Component {
   constructor() {
     super();
     this.state = {
-      //set the station 
+      //set the station
       station: "",
       //set initial value of favoriteMe to null
       favoriteMe: null,
@@ -31,7 +31,6 @@ class SongLayout extends Component {
   }
 
   //update the queriedRadioSearch with entered values of search bar
-
   handleSearch = (event) => {
     const queriedRadioSearch = playlist.filter((radio) =>
       radio.genre.toLowerCase().includes(event.target.value.toLowerCase())
