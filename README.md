@@ -18,6 +18,7 @@ The goal of this app is to provide headspace for someone with the language of mu
 
 **Post MVP**
 - Will come with a like button to add to a User's favorite songlist, saving songs to a favorite list
+- working with a music API to actual present and play music with an adjustable volume button
 - local storage
 - CSS animation suggested by our UX team
 
@@ -30,7 +31,5 @@ https://docs.google.com/document/d/1u8aCoCBBNNm8xSpxzNa8RuTrRVd_mrwex5U-qAxKj5c/
 **Deliverables from UX Team**
 https://www.figma.com/proto/9pVZSIF3pCgSa0xo5u0moZ/P3C?node-id=363%3A51&scaling=min-zoom
 
-
-
-
-   
+**Project App**
+https://space-tank.netlify.app/
