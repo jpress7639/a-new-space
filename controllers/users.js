@@ -12,7 +12,6 @@ const getUsers = async (req, res) => {
   } 
 }
 
-//findById!!!
 const getUser = async (req, res) => {
   try {
     const { id } = req.params
