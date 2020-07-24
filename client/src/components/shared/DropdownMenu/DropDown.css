@@ -61,14 +61,13 @@ div.dropdown-menu nav h5{
 
     div.dropdown-menu nav{
         height: 400px;
-        width: 150px;
-        right: 0px;
+        width: 100px;
+        right: 50px;
         top: 0;
         justify-content: flex-start;
         align-items: flex-start;
         background-color: rgba(210, 212, 244, 0.5);
     }
-
     div.dropdown-menu nav :link{
         font-size: 15px;
         text-align: left;

@@ -43,6 +43,8 @@ class DropDown extends Component{
                         <h5><Link to={`/users/${id}/detail`} style={{textDecoration: `none`, color: `white`}}>MY ACCOUNT</Link></h5>
                         <h5 ><Link to={`/users/favorites`} style={{textDecoration: `none`, color: `white`}}>FAVORITES</Link></h5>
                         <h5><Link to={'/users/sign-in-user'} style={{ textDecoration: `none`, color: `white` }}>SIGN OUT</Link></h5>
+                        <h5 ><Link to={`/users/${id}/favorites`} style={{textDecoration: `none`, color: `white`}}>FAVORITES</Link></h5>
+
                     </nav>
                     </div>
                 ): 

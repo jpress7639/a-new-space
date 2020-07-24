@@ -97,9 +97,11 @@ export default class RadioScreen extends Component {
 
   render() {
     let { index } = this.state
+    let { id } = this.props.match.params
     return (
-      <body className={this.state.radioStation}>
-        <div className='radio-container'>
+      <>
+      <body className={`${this.state.radioStation} container`}>
+        <div className='radio-container item1'>
             <div className='radio-title-container'>
               <h1>SPACE TANK</h1>
             </div>
@@ -114,10 +116,10 @@ export default class RadioScreen extends Component {
               })}>{'>'}
             </h1>
           </div>
-          <DropDown /> 
+            <DropDown id={id}/> 
         </div>
 
-        <div className='radio-song-container'>
+        <div className='radio-song-container item2'>
           <div className='checkbox-favorite-container'>
           <form onSubmit={this.handleFormSubmit}>
               <input
@@ -140,7 +142,8 @@ export default class RadioScreen extends Component {
         </div> 
         <h2 className='current-song'>"{this.state.song}" by {this.state.artist} </h2>
         </div>
-      </body>
+        </body>
+      </>
     );
   }
 }

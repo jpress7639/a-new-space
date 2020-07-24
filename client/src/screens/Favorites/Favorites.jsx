@@ -36,11 +36,11 @@ class FavoritesLayout extends Component {
   };
 
   render() {
-    const { id } = this.props;
+    const { id } = this.props.match.params;
     const genre = [...new Set(this.state.queriedRadioSearch)];
     return (
       <>
-      <Layout>
+      <Layout id={id}>
         <div className="playlist-menu">
           <h1 className="playlist-title">SPACE TANK</h1>
           <input
