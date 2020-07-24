@@ -8,8 +8,8 @@ div.second-moon{
   background: url("https://res.cloudinary.com/dkhiieq9p/image/upload/v1595519732/Spacetank_Full_Moon_2_1_tls4qd.svg");
   background-size: cover;
   position: absolute;
-  top: 10px;
-  left: -75px;
+  top: -10px;
+  left: -50px;
   width: 1200px;
   height: 1200px;
   z-index: -50;
@@ -123,7 +123,7 @@ a {
     height: 600px;
     width: 600px;
     position: absolute;
-    left: -90px;
+    left: -75px;
     top: 0px;
   }
 
