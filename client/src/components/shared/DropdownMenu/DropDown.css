@@ -60,9 +60,9 @@ div.dropdown-menu nav h5{
     }
 
     div.dropdown-menu nav{
-        height: 350px;
+        height: 380px;
         width: 100px;
-        right: 100px;
+        right: 50px;
         top: 0;
         justify-content: flex-start;
         align-items: flex-start;
