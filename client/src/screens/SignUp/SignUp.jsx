@@ -69,8 +69,8 @@ class SignUp extends Component {
               onChange={this.handleChange}
             />
           <button type='submit' className="signup-button">SIGN UP</button>
-          </form>
           <Link class='have-an-account' to='/users/sign-in-user'>Have an account?</Link>
+          </form>
       </>
     )
   }
