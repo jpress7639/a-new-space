@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withRouter, Redirect, Link } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import { createUser } from "../../Services/users"
 import './SignUp.css'
 import StarField from '../../components/StarAnimation/StarAnimation'
@@ -63,13 +63,14 @@ class SignUp extends Component {
             />
             <input
               className="input-password"
+              type="password"
               placeholder="Password"
               name="password"
               onChange={this.handleChange}
             />
           <button type='submit' className="signup-button">SIGN UP</button>
-          <Link class='have-an-account' to='/users/sign-in-user'>Have an account?</Link>
           </form>
+          <Link class='have-an-account' to='/users/sign-in-user'>Have an account?</Link>
       </>
     )
   }
