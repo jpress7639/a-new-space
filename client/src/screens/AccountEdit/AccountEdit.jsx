@@ -51,7 +51,6 @@ class AccountEdit extends Component {
           <div>
             <Layout id={user._id}>
             <div className="user-change">
-            {/* <h3>{user.firstName} {user.lastName}</h3> */}
             <img src={user.imgURL} alt={user.firstName}></img>
             </div>
                 <form className="edit" onSubmit={this.handleSubmit}>
