@@ -20,7 +20,7 @@ export const getUser = async id => {
 
 export const createUser = async user => {
   try {
-    const response = await api.user('/users', user)
+    const response = await api.post('/users', user)
     return response.data
   } catch (error) {
     throw error
