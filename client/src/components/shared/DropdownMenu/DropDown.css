@@ -30,16 +30,19 @@ div.dropdown-menu nav{
     border-radius: 10px;
     box-shadow: 10px 10px 45px 5px;
     position: absolute;
-    right: 60px;
-    font-size: 25px;
+    right: 90px;
     padding: 5px;
     display: flex;
-    justify-content: space-evenly;
     align-items: flex-start;
     flex-direction: column;
-    height: 80%;
-    width: 20%;
+    height: 450px;
+    width: 150px;
     transition: all 1s;
+}
+
+div.dropdown-menu nav h5{
+    font-size: 20px;
+    width: 30px;
 }
 
 @media (max-width: 425px) {
@@ -49,12 +52,7 @@ div.dropdown-menu nav{
     }
 
     div.hamburger {
-
         padding: 10px 5px;
-        position: absolute;
-        top: 15px;
-        right: 10px;
-
     }
 
     div.hamburger div.line{
@@ -62,15 +60,14 @@ div.dropdown-menu nav{
     }
 
     div.dropdown-menu nav{
-        height: 90%;
-        width: 33%;
-        right: 10px;
+        height: 400px;
+        width: 100px;
+        right: 50px;
         top: 0;
         justify-content: flex-start;
         align-items: flex-start;
-        background-color: transparent;
+        background-color: rgba(210, 212, 244, 0.5);
     }
-
     div.dropdown-menu nav :link{
         font-size: 15px;
         text-align: left;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Redirect, Link } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import { createUser } from "../../Services/users"
 import './SignUp.css'
 import StarField from '../../components/StarAnimation/StarAnimation'
@@ -31,20 +31,17 @@ class SignUp extends Component {
   handleSubmit = async (e) => {
     e.preventDefault()
     const created = await createUser(this.state.user)
-    this.setState ({ created })
+    if (created) {
+      this.props.history.push('/')
+    }
   }
 
   render() {
-    const {created} = this.state
-    if (created) {
-      return <Redirect to={`/`} />
-    }
-
     return (
       <>
       <div className="second-moon"></div>
       <StarField />
-        <form className="signup-form">
+        <form className="signup-form" onSubmit={this.handleSubmit}>
           <h1 className="started">LET'S GET STARTED</h1>
             <input
               className="input-first"
@@ -66,16 +63,17 @@ class SignUp extends Component {
             />
             <input
               className="input-password"
+              type="password"
               placeholder="Password"
               name="password"
               onChange={this.handleChange}
             />
-          <Link to='/'><button type='submit' className="signup-button">SIGN UP</button></Link>
-          <Link class='have-an-account' to='/users/sign-in-user'>Have an account?</Link>
+          <button type='submit' className="signup-button">SIGN UP</button>
           </form>
+          <Link class='have-an-account' to='/users/sign-in-user'>Have an account?</Link>
       </>
     )
   }
 }
 
-export default SignUp
+export default withRouter(SignUp)

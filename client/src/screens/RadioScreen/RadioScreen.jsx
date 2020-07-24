@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import './RadioScreen.css'
 import playlist from "../../playlist/playlist.json"
-import {Link} from 'react-router-dom'
 import DropDown from '../../components/shared/DropdownMenu/DropDown'
-import Modal from '../../components/Modal/Modal'
+
 
 const next = 1;
 const prev = -1;
@@ -98,10 +97,11 @@ export default class RadioScreen extends Component {
 
   render() {
     let { index } = this.state
-    let {id} = this.props.match.params
+    let { id } = this.props.match.params
     return (
-      <body className={this.state.radioStation}>
-        <div className='radio-container'>
+      <>
+      <body className={`${this.state.radioStation} container`}>
+        <div className='radio-container item1'>
             <div className='radio-title-container'>
               <h1>SPACE TANK</h1>
             </div>
@@ -116,10 +116,10 @@ export default class RadioScreen extends Component {
               })}>{'>'}
             </h1>
           </div>
-          <DropDown className='dropdown'/> 
+            <DropDown id={id}/> 
         </div>
 
-        <div className='radio-song-container'>
+        <div className='radio-song-container item2'>
           <div className='checkbox-favorite-container'>
           <form onSubmit={this.handleFormSubmit}>
               <input
@@ -139,11 +139,11 @@ export default class RadioScreen extends Component {
             </svg>
             </button>
           </form>
-          <Modal />
         </div> 
         <h2 className='current-song'>"{this.state.song}" by {this.state.artist} </h2>
         </div>
-      </body>
+        </body>
+      </>
     );
   }
 }

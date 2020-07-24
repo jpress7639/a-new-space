@@ -21,7 +21,7 @@
 
 h1 {
   font-size: 125%;
-  margin: 12px;
+  padding-top: 30px;
   color: rgb(69, 57, 102);
 }
 
@@ -49,7 +49,8 @@ h1 {
 }
 
 .radio-song-container {
-  margin-top: 30%;
+  margin-top: 41%;
+  padding-right: 20%;
   background-color: rgba(210, 212, 244, 0.42);
   display: flex;
   justify-content: space-evenly;
@@ -86,12 +87,14 @@ h1 {
 .current-song {
   align-self: center;
 }
+
 @media (max-width: 425px) {
   .dropdown {
     position: absolute;
     top: 0;
     right: 0;
   }
+
   .Space{
     padding-top: 20px;
     background: url("https://media.giphy.com/media/dui3nXDO54dBxq7Cjs/giphy.gif");
@@ -141,8 +144,7 @@ h1 {
   }
 
   .radio-song-container {
-    align-self: flex-end;
-    margin-top: 138.5%;
+    margin-top: 140%;
   }
 
   .radio-song-container h2 {
@@ -152,6 +154,7 @@ h1 {
   .checkbox-favorite-container {
     position: absolute;
     bottom: 100px;
+    left: 0;
   }
   .checkbox {
     width: 20px;

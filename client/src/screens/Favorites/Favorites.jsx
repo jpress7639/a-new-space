@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import playlist from "../../playlist/playlist.json";
 import "../../components/shared/SongPlaylistLayout/SongLayout.css";
 import { Link } from "react-router-dom";
+import Layout from "../../components/shared/Layout/Layout"
 
 class FavoritesLayout extends Component {
   constructor() {
@@ -35,10 +36,11 @@ class FavoritesLayout extends Component {
   };
 
   render() {
-    const { id } = this.props;
+    const { id } = this.props.match.params;
     const genre = [...new Set(this.state.queriedRadioSearch)];
     return (
       <>
+      <Layout id={id}>
         <div className="playlist-menu">
           <h1 className="playlist-title">SPACE TANK</h1>
           <input
@@ -54,6 +56,7 @@ class FavoritesLayout extends Component {
             </div>
           ))}
         </div>
+        </Layout>
       </>
     );
   }

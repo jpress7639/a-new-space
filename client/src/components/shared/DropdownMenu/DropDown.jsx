@@ -39,10 +39,10 @@ class DropDown extends Component{
             {this.state.showMenu ? ( <div className="dropdown-menu" ref={(element) => {
                 this.dropdownMenu = element;}}>
                     <nav>
-                        <h4><Link to={`/users/${id}`} style={{textDecoration: `none`, color: `white`}}>HOME</Link></h4>
-                        <h4><Link to={`/users/${id}/detail`} style={{textDecoration: `none`, color: `white`}}>MY ACCOUNT</Link></h4>
-                <h4><Link to={'/users/sign-in-user'} style={{ textDecoration: `none`, color: `white` }}>SIGN OUT</Link></h4>
-                <h4><Link to={'/users/favorites'} style={{textDecoration: `none`, color: `white`}}>FAVORITES</Link></h4>
+                        <h5><Link to={`/users/${id}`} style={{textDecoration: `none`, color: `white`}}>HOME</Link></h5>
+                        <h5><Link to={`/users/${id}/detail`} style={{textDecoration: `none`, color: `white`}}>MY ACCOUNT</Link></h5>
+                        <h5><Link to={'/users/sign-in-user'} style={{ textDecoration: `none`, color: `white` }}>SIGN OUT</Link></h5>
+                        <h5 ><Link to={`/users/${id}/favorites`} style={{textDecoration: `none`, color: `white`}}>FAVORITES</Link></h5>
                     </nav>
                     </div>
                 ): 
