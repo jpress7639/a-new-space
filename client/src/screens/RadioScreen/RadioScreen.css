@@ -131,7 +131,7 @@ h1 {
     margin: 0 auto;
     text-align: center;
     position: absolute;
-    bottom: -100px;
+    bottom: -50px;
     border-bottom: 1px solid black;
   }
 
@@ -153,8 +153,7 @@ h1 {
   }
   .checkbox-favorite-container {
     position: absolute;
-    left: 0;
-    bottom: 100px;
+    bottom: 150px;
     left: 0;
   }
   .checkbox {
